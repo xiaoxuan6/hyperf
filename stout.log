@@ -1,0 +1,1304 @@
+[2021-03-31 15:42:21 @1672.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 15:43:28 #1672.1]	INFO	Server is shutdown now
+[2021-03-31 15:43:38 @1703.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 15:43:53 #1703.1]	INFO	Server is shutdown now
+[2021-03-31 15:44:03 @1733.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 15:45:08 #1733.1]	INFO	Server is shutdown now
+[2021-03-31 15:45:18 @1763.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 15:46:21 #1763.1]	INFO	Server is shutdown now
+[2021-03-31 15:46:31 @1792.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 15:46:56 #1792.1]	INFO	Server is shutdown now
+[2021-03-31 15:47:05 @1822.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 16:00:38 #1822.1]	INFO	Server is shutdown now
+[2021-03-31 16:00:47 @1852.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 16:17:42 #1852.1]	INFO	Server is shutdown now
+[2021-03-31 16:17:52 @1881.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] invalid container Class[27] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[ERROR] invalid container Class[27] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-03-31 16:18:39 #1881.1]	INFO	Server is shutdown now
+[2021-03-31 16:18:49 @1910.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] Entry "Psr\Log\LoggerInterface" cannot be resolved: the class is not instantiable
+Full definition:
+Object[Psr\Log\LoggerInterface][20] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Exception/InvalidDefinitionException.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ObjectResolver.php(89): Hyperf\Di\Exception\InvalidDefinitionException::create()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ObjectResolver.php(66): Hyperf\Di\Resolver\ObjectResolver->createInstance()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ResolverDispatcher.php(62): Hyperf\Di\Resolver\ObjectResolver->resolve()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/DepthGuard.php(75): Hyperf\Di\Resolver\ResolverDispatcher->Hyperf\Di\Resolver\{closure}()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ResolverDispatcher.php(63): Hyperf\Di\Resolver\DepthGuard->call()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Container.php(185): Hyperf\Di\Resolver\ResolverDispatcher->resolve()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Container.php(82): Hyperf\Di\Container->resolveDefinition()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Container.php(117): Hyperf\Di\Container->make()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php(29): Hyperf\Di\Container->get()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#10 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#11 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#12 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#13 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#14 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#15 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#16 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#17 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#18 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#19 {main}
+[2021-03-31 16:19:18 #1910.1]	INFO	Server is shutdown now
+[2021-03-31 16:19:28 @1939.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[29] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[29] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[29] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[29] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-03-31 16:25:35 #1939.1]	INFO	Server is shutdown now
+[2021-03-31 16:25:43 @1968.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+
+Deprecated: Non-static method App\Utils\Facade::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Facade::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-03-31 16:26:28 #1968.1]	INFO	Server is shutdown now
+[2021-03-31 16:26:39 @1997.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 16:28:39 #1997.1]	INFO	Server is shutdown now
+[2021-03-31 16:28:48 @2026.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] No entry or class found for 'default'[79] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Container.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Container.php(117): Hyperf\Di\Container->make()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php(32): Hyperf\Di\Container->get()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#10 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#11 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#12 {main}
+[2021-03-31 16:29:21 #2026.1]	INFO	Server is shutdown now
+[2021-03-31 16:29:31 @2055.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 16:31:22 #2055.1]	INFO	Server is shutdown now
+[2021-03-31 16:31:32 @2084.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-03-31 16:31:48 *2094.0]	NOTICE	finish (ERRNO 1004): send 136 bytes failed, because session#12 is closed
+[2021-03-31 16:31:48 *2094.0]	NOTICE	end (ERRNO 1005): session[12] is closed
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-03-31 16:31:50 *2094.0]	NOTICE	finish (ERRNO 1004): send 136 bytes failed, because session#19 is closed
+[2021-03-31 16:31:50 *2094.0]	NOTICE	end (ERRNO 1005): session[19] is closed
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[35] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-03-31 16:32:07 #2084.1]	INFO	Server is shutdown now
+[2021-03-31 16:32:15 @2113.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[2021-03-31 16:32:56 #2113.1]	INFO	Server is shutdown now
+[2021-03-31 16:33:08 @2142.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+
+Deprecated: Non-static method App\Utils\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade.php on line 31
+[2021-03-31 16:37:02 #2142.1]	INFO	Server is shutdown now
+[2021-03-31 16:37:50 @2171.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+
+Deprecated: Non-static method App\Utils\Facade\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade/Facade.php on line 31
+
+Deprecated: Non-static method App\Utils\Facade\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade/Facade.php on line 31
+
+Deprecated: Non-static method App\Utils\Facade\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade/Facade.php on line 31
+
+Deprecated: Non-static method App\Utils\Facade\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade/Facade.php on line 31
+
+Deprecated: Non-static method App\Utils\Facade\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade/Facade.php on line 31
+
+Deprecated: Non-static method App\Utils\Facade\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade/Facade.php on line 31
+[2021-03-31 16:44:26 #2171.1]	INFO	Server is shutdown now
+[2021-03-31 16:44:36 @2251.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 16:46:57 #2251.1]	INFO	Server is shutdown now
+[2021-03-31 16:47:07 @2280.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-03-31 16:51:15 #2280.1]	INFO	Server is shutdown now
+[2021-03-31 16:51:29 @2309.0]	WARNING	set_document_root: document_root[/mnt/c/Code_cloud/hyperf-skeleton/public] does not exist
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+
+Deprecated: Non-static method App\Utils\Facade\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade/Facade.php on line 31
+
+Deprecated: Non-static method App\Utils\Facade\Log::getConfig() should not be called statically in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade/Facade.php on line 31
+[2021-03-31 16:53:03 #2309.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 11:35:47 #4262.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`name` = ? limit 1' at line 1 (SQL: select * from `Oauth` where 123 `name` = vinshon limit 1)[1082] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Connection.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Connection.php(1039): Hyperf\Database\Connection->runQueryCallback()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Connection.php(289): Hyperf\Database\Connection->run()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/db-connection/src/Connection.php(68): Hyperf\Database\Connection->select()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/db-connection/src/Traits/DbConnection.php(41): Hyperf\DbConnection\Connection->__call()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Query/Builder.php(2718): Hyperf\DbConnection\Connection->select()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Query/Builder.php(1860): Hyperf\Database\Query\Builder->runSelect()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Query/Builder.php(2883): Hyperf\Database\Query\Builder->Hyperf\Database\Query\{closure}()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Query/Builder.php(1861): Hyperf\Database\Query\Builder->onceWithColumns()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php(591): Hyperf\Database\Query\Builder->get()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php(575): Hyperf\Database\Model\Builder->getModels()
+#10 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Concerns/BuildsQueries.php(86): Hyperf\Database\Model\Builder->get()
+#11 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php(522): Hyperf\Database\Model\Builder->first()
+#12 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#13 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#14 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#15 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#16 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#17 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#18 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#19 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#20 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#21 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#22 {main}
+[ERROR] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`name` = ? limit 1' at line 1 (SQL: select * from `Oauth` where 123 `name` = vinshon limit 1)[1082] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Connection.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Connection.php(1039): Hyperf\Database\Connection->runQueryCallback()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Connection.php(289): Hyperf\Database\Connection->run()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/db-connection/src/Connection.php(68): Hyperf\Database\Connection->select()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/db-connection/src/Traits/DbConnection.php(41): Hyperf\DbConnection\Connection->__call()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Query/Builder.php(2718): Hyperf\DbConnection\Connection->select()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Query/Builder.php(1860): Hyperf\Database\Query\Builder->runSelect()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Query/Builder.php(2883): Hyperf\Database\Query\Builder->Hyperf\Database\Query\{closure}()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Query/Builder.php(1861): Hyperf\Database\Query\Builder->onceWithColumns()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php(591): Hyperf\Database\Query\Builder->get()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php(575): Hyperf\Database\Model\Builder->getModels()
+#10 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Concerns/BuildsQueries.php(86): Hyperf\Database\Model\Builder->get()
+#11 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php(522): Hyperf\Database\Model\Builder->first()
+#12 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#13 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#14 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#15 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#16 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#17 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#18 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#19 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#20 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#21 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#22 {main}
+[2021-04-01 11:37:47 #4415.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-04-01 11:45:19 #4444.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-04-01 11:46:51 #4473.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-04-01 11:47:17 #4502.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-04-01 11:48:09 #4531.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+bool(false)
+[2021-04-01 11:48:51 #4560.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+string(3) "__ "
+[2021-04-01 11:49:41 #4589.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+string(3) "__ "
+
+Fatal error: Uncaught Swoole\ExitException: swoole exit in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php:54
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/exception-handler/src/ExceptionHandlerDispatcher.php(49): App\Exception\Handler\AppExceptionHandler->handle()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(119): Hyperf\ExceptionHandler\ExceptionHandlerDispatcher->dispatch()
+#2 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php on line 54
+[2021-04-01 11:49:54 *4628.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php:54
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/exception-handler/src/ExceptionHandlerDispatcher.php(49): App\Exception\Handler\AppExceptionHandler->handle()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(119): Hyperf\ExceptionHandler\ExceptionHandlerDispatcher->dispatch()
+#2 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php on line 54
+[2021-04-01 11:49:54 $4625.0]	WARNING	check_worker_exit_status: worker#0[pid=4628] abnormal exit, status=255, signal=0
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[2021-04-01 11:50:13 #4618.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+string(3) "__ "
+0
+Fatal error: Uncaught Swoole\ExitException: swoole exit in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php:55
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/exception-handler/src/ExceptionHandlerDispatcher.php(49): App\Exception\Handler\AppExceptionHandler->handle()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(119): Hyperf\ExceptionHandler\ExceptionHandlerDispatcher->dispatch()
+#2 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php on line 55
+[2021-04-01 11:50:27 *4666.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php:55
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/exception-handler/src/ExceptionHandlerDispatcher.php(49): App\Exception\Handler\AppExceptionHandler->handle()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(119): Hyperf\ExceptionHandler\ExceptionHandlerDispatcher->dispatch()
+#2 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php on line 55
+[2021-04-01 11:50:27 $4663.0]	WARNING	check_worker_exit_status: worker#0[pid=4666] abnormal exit, status=255, signal=0
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(29): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+string(3) "__ "
+0
+Fatal error: Uncaught Swoole\ExitException: swoole exit in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php:55
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/exception-handler/src/ExceptionHandlerDispatcher.php(49): App\Exception\Handler\AppExceptionHandler->handle()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(119): Hyperf\ExceptionHandler\ExceptionHandlerDispatcher->dispatch()
+#2 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php on line 55
+[2021-04-01 11:50:32 *4684.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php:55
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/exception-handler/src/ExceptionHandlerDispatcher.php(49): App\Exception\Handler\AppExceptionHandler->handle()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(119): Hyperf\ExceptionHandler\ExceptionHandlerDispatcher->dispatch()
+#2 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php on line 55
+[2021-04-01 11:50:32 $4663.0]	WARNING	check_worker_exit_status: worker#0[pid=4684] abnormal exit, status=255, signal=0
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[2021-04-01 11:50:55 #4656.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] Call to undefined method Qbhy\HyperfAuth\Annotation\Auth::login()[31] in /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#9 {main}
+string(3) "__ "
+0
+Fatal error: Uncaught Swoole\ExitException: swoole exit in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php:55
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/exception-handler/src/ExceptionHandlerDispatcher.php(49): App\Exception\Handler\AppExceptionHandler->handle()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(119): Hyperf\ExceptionHandler\ExceptionHandlerDispatcher->dispatch()
+#2 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php on line 55
+[2021-04-01 12:00:53 *4713.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php:55
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/exception-handler/src/ExceptionHandlerDispatcher.php(49): App\Exception\Handler\AppExceptionHandler->handle()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(119): Hyperf\ExceptionHandler\ExceptionHandlerDispatcher->dispatch()
+#2 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/app/Exception/Handler/AppExceptionHandler.php on line 55
+[2021-04-01 12:00:53 $4710.0]	WARNING	check_worker_exit_status: worker#0[pid=4713] abnormal exit, status=255, signal=0
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[2021-04-01 12:01:06 #4703.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] Call to undefined method Qbhy\HyperfAuth\Annotation\Auth::login()[31] in /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#9 {main}
+[2021-04-01 12:01:46 #4741.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] Call to undefined method Qbhy\HyperfAuth\Annotation\Auth::gurad()[31] in /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#9 {main}
+[2021-04-01 12:02:13 #4770.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] Call to undefined method Qbhy\HyperfAuth\Annotation\Auth::guard()[31] in /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#9 {main}
+[2021-04-01 13:15:32 #4799.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] Argument 1 passed to Hyperf\Database\Model\Model::__construct() must be of the type array, object given, called in /mnt/c/Code_cloud/hyperf-skeleton/app/Model/Oauth.php on line 55[138] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Model.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Model/Oauth.php(55): Hyperf\Database\Model\Model->__construct()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(32): App\Model\Oauth::retrieveById()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#10 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#11 {main}
+[2021-04-01 13:17:22 #4828.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] Secret is required.[267] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/simple-jwt/src/JWTManager.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/simple-jwt/src/JWTManager.php(63): Qbhy\SimpleJwt\JWTManager->verifyConfig()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/Guard/JwtGuard.php(49): Qbhy\SimpleJwt\JWTManager->__construct()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ObjectResolver.php(99): Qbhy\HyperfAuth\Guard\JwtGuard->__construct()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ObjectResolver.php(66): Hyperf\Di\Resolver\ObjectResolver->createInstance()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ResolverDispatcher.php(62): Hyperf\Di\Resolver\ObjectResolver->resolve()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/DepthGuard.php(75): Hyperf\Di\Resolver\ResolverDispatcher->Hyperf\Di\Resolver\{closure}()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ResolverDispatcher.php(63): Hyperf\Di\Resolver\DepthGuard->call()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Container.php(185): Hyperf\Di\Resolver\ResolverDispatcher->resolve()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Container.php(82): Hyperf\Di\Container->resolveDefinition()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/Functions.php(417): Hyperf\Di\Container->make()
+#10 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/AuthManager.php(83): make()
+#11 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/AuthManager.php(57): Qbhy\HyperfAuth\AuthManager->guard()
+#12 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(32): Qbhy\HyperfAuth\AuthManager->__call()
+#13 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#14 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#15 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#16 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#17 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#18 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#19 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#20 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#21 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#22 {main}
+[ERROR] Secret is required.[267] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/simple-jwt/src/JWTManager.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/simple-jwt/src/JWTManager.php(63): Qbhy\SimpleJwt\JWTManager->verifyConfig()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/Guard/JwtGuard.php(49): Qbhy\SimpleJwt\JWTManager->__construct()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ObjectResolver.php(99): Qbhy\HyperfAuth\Guard\JwtGuard->__construct()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ObjectResolver.php(66): Hyperf\Di\Resolver\ObjectResolver->createInstance()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ResolverDispatcher.php(62): Hyperf\Di\Resolver\ObjectResolver->resolve()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/DepthGuard.php(75): Hyperf\Di\Resolver\ResolverDispatcher->Hyperf\Di\Resolver\{closure}()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Resolver/ResolverDispatcher.php(63): Hyperf\Di\Resolver\DepthGuard->call()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Container.php(185): Hyperf\Di\Resolver\ResolverDispatcher->resolve()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/di/src/Container.php(82): Hyperf\Di\Container->resolveDefinition()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/Functions.php(417): Hyperf\Di\Container->make()
+#10 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/AuthManager.php(83): make()
+#11 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/AuthManager.php(57): Qbhy\HyperfAuth\AuthManager->guard()
+#12 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/AuthController.php(32): Qbhy\HyperfAuth\AuthManager->__call()
+#13 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#14 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#15 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#16 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#17 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#18 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#19 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#20 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#21 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#22 {main}
+[2021-04-01 13:26:49 #4857.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 13:32:32 #4886.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 13:35:18 #4915.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 13:37:00 #4944.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 13:42:28 #4973.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 13:49:45 #5002.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 13:51:16 #5031.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 13:55:23 #5060.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:03:59 #5089.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:05:22 #5118.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:06:36 #5147.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:09:41 #5176.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:10:08 #5205.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:10:50 #5234.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:11:09 #5263.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:13:21 #5292.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:15:38 #5321.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:22:34 #5350.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:23:11 #5379.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:30:38 #5408.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:44:15 #5437.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+
+Notice: compact(): Undefined variable: token in /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php on line 54
+[2021-04-01 14:46:33 #5466.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+
+Notice: compact(): Undefined variable: token in /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php on line 54
+[2021-04-01 14:49:02 #5495.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 14:51:08 #5524.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+
+Notice: compact(): Undefined variable: token in /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php on line 54
+
+Notice: compact(): Undefined variable: token in /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php on line 54
+
+Notice: compact(): Undefined variable: token in /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php on line 54
+[ERROR] The token is already on the blacklist[189] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/simple-jwt/src/JWTManager.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/Guard/JwtGuard.php(154): Qbhy\SimpleJwt\JWTManager->parse()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php(65): Qbhy\HyperfAuth\Guard\JwtGuard->refresh()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->refresh()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#10 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#11 {main}
+
+Notice: compact(): Undefined variable: token in /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php on line 54
+
+Notice: compact(): Undefined variable: token in /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php on line 54
+[2021-04-01 14:56:48 #5553.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 15:39:38 #5582.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] Argument 1 passed to Qbhy\HyperfAuth\Guard\JwtGuard::check() must be of the type string or null, array given, called in /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Middleware_AuthMiddleware.proxy.php on line 38[117] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/Guard/JwtGuard.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Middleware_AuthMiddleware.proxy.php(38): Qbhy\HyperfAuth\Guard\JwtGuard->check()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): App\Middleware\AuthMiddleware->process()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#8 {main}
+[2021-04-01 15:42:08 #5620.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 15:43:31 #5649.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] The token is required.[105] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/Guard/JwtGuard.php
+[ERROR] #0 [internal function]: Qbhy\HyperfAuth\Guard\JwtGuard->user()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/AuthManager.php(60): call_user_func_array()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Middleware_AuthMiddleware.proxy.php(44): Qbhy\HyperfAuth\AuthManager->__call()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): App\Middleware\AuthMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[ERROR] The token is required.[105] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/Guard/JwtGuard.php
+[ERROR] #0 [internal function]: Qbhy\HyperfAuth\Guard\JwtGuard->user()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/AuthManager.php(60): call_user_func_array()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Middleware_AuthMiddleware.proxy.php(44): Qbhy\HyperfAuth\AuthManager->__call()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): App\Middleware\AuthMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-04-01 15:44:31 #5678.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 15:46:13 #5707.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] The token is required.[105] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/Guard/JwtGuard.php
+[ERROR] #0 [internal function]: Qbhy\HyperfAuth\Guard\JwtGuard->user()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/AuthManager.php(60): call_user_func_array()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Middleware_AuthMiddleware.proxy.php(43): Qbhy\HyperfAuth\AuthManager->__call()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): App\Middleware\AuthMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[ERROR] The token is required.[105] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/Guard/JwtGuard.php
+[ERROR] #0 [internal function]: Qbhy\HyperfAuth\Guard\JwtGuard->user()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/96qbhy/hyperf-auth/src/AuthManager.php(60): call_user_func_array()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Middleware_AuthMiddleware.proxy.php(43): Qbhy\HyperfAuth\AuthManager->__call()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): App\Middleware\AuthMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-04-01 15:48:56 #5736.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 15:56:38 #5765.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 15:57:43 #5794.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 16:00:30 #5823.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 17:43:42 #5852.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php(40): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php(40): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-04-01 17:49:09 #5940.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] No query results for model [App\Model\Oauth].[526] in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/database/src/Model/Builder.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/runtime/container/proxy/App_Controller_AuthController.proxy.php(40): Hyperf\Database\Model\Builder->firstOrFail()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\AuthController->login()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-04-01 18:01:41 #5969.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-01 19:03:05 #5998.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[ERROR] Call to undefined method Hyperf\Logger\LoggerFactory::info()[32] in /mnt/c/Code_cloud/hyperf-skeleton/app/Utils/Facade/Facade.php
+[ERROR] #0 /mnt/c/Code_cloud/hyperf-skeleton/app/Controller/LogController.php(17): App\Utils\Facade\Facade::__callStatic()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(161): App\Controller\LogController->index()
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/CoreMiddleware.php(113): Hyperf\HttpServer\CoreMiddleware->handleFound()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\HttpServer\CoreMiddleware->process()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#5 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/validation/src/Middleware/ValidationMiddleware.php(83): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#6 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/AbstractRequestHandler.php(64): Hyperf\Validation\Middleware\ValidationMiddleware->process()
+#7 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpRequestHandler.php(26): Hyperf\Dispatcher\AbstractRequestHandler->handleRequest()
+#8 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/dispatcher/src/HttpDispatcher.php(40): Hyperf\Dispatcher\HttpRequestHandler->handle()
+#9 /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/http-server/src/Server.php(116): Hyperf\Dispatcher\HttpDispatcher->dispatch()
+#10 {main}
+[2021-04-02 11:57:11 #6476.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-02 14:03:28 #6505.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-02 14:08:02 #6535.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
+[2021-04-02 14:11:49 #6564.1]	INFO	Server is shutdown now
+[INFO] TaskWorker#1 started.
+[INFO] Worker#0 started.
+[INFO] HTTP Server listening at 0.0.0.0:2698
+[INFO] Process[queue.default.0] start.
