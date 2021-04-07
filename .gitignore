@@ -11,3 +11,5 @@ vendor/
 .DS_Store
 .phpunit*
 *.cache
+./stout.log
+stout.log

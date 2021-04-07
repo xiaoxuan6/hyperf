@@ -14,11 +14,14 @@ return [
             "name" => "eto",
             // (optional) options
             "--age" => 18
-        ])
+        ]),
         /*
          * 当您完成上述的配置后，以及定义了定时任务后，只需要直接启动 Server，定时任务便会一同启动。
          * 在您启动后，即便您定义了足够短周期的定时任务，定时任务也不会马上开始执行，所有定时任务都会等到下一个分钟周期时才会开始执行，
          * 比如您启动的时候是 10 时 11 分 12 秒，那么定时任务会在 10 时 12 分 00 秒 才会正式开始执行。
          */
+
+        // Callback类型定时任务（默认）
+        (new \Hyperf\Crontab\Crontab())->setName("call")->setRule("*/3 * * * * *")->setCallback([\App\Command\CrontabCommand::class, "handle"])->setMemo("这是闭包定时任务")
     ]
 ];

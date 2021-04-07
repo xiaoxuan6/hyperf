@@ -22,6 +22,27 @@ class Oauth extends Model implements CacheableInterface, Authenticatable
     use Cacheable;
 
     /**
+     * Notes: 重新设置过期时间
+     * Date: 2021/4/2 16:49
+     * @return int|null
+     */
+    public function getCacheTTL(): ?int
+    {
+        return 3600;
+    }
+
+    /**
+     * Notes: 自定义删除缓存数据
+     * Date: 2021/4/2 16:50
+     * @return bool
+     */
+    public function deleteCache(): bool
+    {
+//        $this->getKey();
+        return false;
+    }
+
+    /**
      * The table associated with the model.
      *
      * @var string

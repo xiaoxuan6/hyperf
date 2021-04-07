@@ -18,6 +18,9 @@ use Hyperf\Redis\RedisFactory;
  * @method static set(string $key, $value)
  * @method static get(string $key)
  * @method static has(string $key)
+ *
+ * @method static hget(string $key)
+ * @method static hgetAll(string $key)
  */
 class Redis extends Facade
 {
