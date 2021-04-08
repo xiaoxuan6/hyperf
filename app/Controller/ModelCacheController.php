@@ -46,6 +46,12 @@ class ModelCacheController
         // 通过全局删除事件监听删除操作
         Oauth::query(true)->whereKey(1)->delete();
 
+    }
 
+    public function notExists()
+    {
+        Oauth::query()->whereKey(10000)->firstOrFail();
+
+        return response()->raw("sd");
     }
 }

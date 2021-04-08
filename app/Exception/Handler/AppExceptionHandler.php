@@ -46,7 +46,7 @@ class AppExceptionHandler extends ExceptionHandler
         /**
          * 处理数据不存在的报错
          */
-        if($throwable instanceof ModelNotFoundException) {
+        if ($throwable instanceof ModelNotFoundException) {
             return response()->json(["code" => 500, "msg" => $throwable->getMessage()]);
         }
 
