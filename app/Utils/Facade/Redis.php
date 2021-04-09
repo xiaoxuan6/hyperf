@@ -19,6 +19,10 @@ use Hyperf\Redis\RedisFactory;
  * @method static get(string $key)
  * @method static has(string $key)
  *
+ * @method static keys(string $key)
+ * @method static scan(&$iterator, $pattern = null, $count = 0)
+ * @method static multi($mode = \Redis::MULTI)
+ *
  * @method static hget(string $key)
  * @method static hgetAll(string $key)
  */

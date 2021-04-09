@@ -19,7 +19,7 @@ Router::get('/favicon.ico', function () {
     return '';
 });
 
-Router::addRoute(["GET"], "/redis", "App\Controller\IndexController@cache");
+//Router::addRoute(["GET"], "/redis", "App\Controller\IndexController@cache");
 Router::get("/cache", "App\Controller\IndexController@cc");
 
 // 路由组：注意 "/"

@@ -64,3 +64,30 @@ if (!function_exists("response")) {
         return app(\Hyperf\HttpServer\Contract\ResponseInterface::class);
     }
 }
+
+if (!function_exists("success")) {
+    /**
+     * Notes:
+     * Date: 2021/4/9 17:21
+     * @param $data
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    function success($data)
+    {
+        return response()->json(["code" => 200, "data" => $data]);
+    }
+}
+
+if (!function_exists("fail")) {
+    /**
+     * Notes:
+     * Date: 2021/4/9 17:21
+     * @param $data
+     * @param int $code
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    function fail($data, $code = __LINE__)
+    {
+        return response()->json(["code" => $code, "data" => $data]);
+    }
+}
