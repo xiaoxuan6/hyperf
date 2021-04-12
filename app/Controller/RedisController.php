@@ -23,9 +23,10 @@ class RedisController
     {
         $i = 0;
         $result = [];
+        $iterator = null;
 
         while (true) {
-            $res = Redis::scan(null, "c*", 1);
+            $res = Redis::scan($iterator, "c*", 10);
 
             if (!$res || $i++ > 2) {
                 break;

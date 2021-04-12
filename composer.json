@@ -21,6 +21,7 @@
         "hyperf/crontab": "^2.1",
         "hyperf/database": "~2.1.0",
         "hyperf/db-connection": "~2.1.0",
+        "hyperf/elasticsearch": "^2.1",
         "hyperf/filesystem": "^2.1",
         "hyperf/framework": "~2.1.0",
         "hyperf/guzzle": "~2.1.0",

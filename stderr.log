@@ -1,0 +1,72 @@
+PHP Fatal error:  Uncaught TypeError: Return value of Hyperf\Utils\ApplicationContext::getContainer() must be an instance of Psr\Container\ContainerInterface, null returned in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php:28
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/app/helper.php(15): Hyperf\Utils\ApplicationContext::getContainer()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(69): require('/mnt/c/Code_clo...')
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(59): composerRequireb653e6933471d96e45a14facbe128f70()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/autoload.php(7): ComposerAutoloaderInitb653e6933471d96e45a14facbe128f70::getLoader()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/bin/hyperf.php(13): require('/mnt/c/Code_clo...')
+#5 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php on line 28
+PHP Fatal error:  Uncaught TypeError: Return value of Hyperf\Utils\ApplicationContext::getContainer() must be an instance of Psr\Container\ContainerInterface, null returned in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php:28
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/app/helper.php(15): Hyperf\Utils\ApplicationContext::getContainer()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(69): require('/mnt/c/Code_clo...')
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(59): composerRequireb653e6933471d96e45a14facbe128f70()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/autoload.php(7): ComposerAutoloaderInitb653e6933471d96e45a14facbe128f70::getLoader()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/bin/hyperf.php(13): require('/mnt/c/Code_clo...')
+#5 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php on line 28
+PHP Fatal error:  Uncaught TypeError: Return value of Hyperf\Utils\ApplicationContext::getContainer() must be an instance of Psr\Container\ContainerInterface, null returned in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php:28
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/app/helper.php(15): Hyperf\Utils\ApplicationContext::getContainer()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(69): require('/mnt/c/Code_clo...')
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(59): composerRequireb653e6933471d96e45a14facbe128f70()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/autoload.php(7): ComposerAutoloaderInitb653e6933471d96e45a14facbe128f70::getLoader()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/bin/hyperf.php(13): require('/mnt/c/Code_clo...')
+#5 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php on line 28
+PHP Fatal error:  Uncaught TypeError: Return value of Hyperf\Utils\ApplicationContext::getContainer() must be an instance of Psr\Container\ContainerInterface, null returned in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php:28
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/app/helper.php(15): Hyperf\Utils\ApplicationContext::getContainer()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(69): require('/mnt/c/Code_clo...')
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(59): composerRequireb653e6933471d96e45a14facbe128f70()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/autoload.php(7): ComposerAutoloaderInitb653e6933471d96e45a14facbe128f70::getLoader()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/bin/hyperf.php(13): require('/mnt/c/Code_clo...')
+#5 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php on line 28
+PHP Fatal error:  Uncaught TypeError: Return value of Hyperf\Utils\ApplicationContext::getContainer() must be an instance of Psr\Container\ContainerInterface, null returned in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php:28
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/app/helper.php(15): Hyperf\Utils\ApplicationContext::getContainer()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(69): require('/mnt/c/Code_clo...')
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(59): composerRequireb653e6933471d96e45a14facbe128f70()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/autoload.php(7): ComposerAutoloaderInitb653e6933471d96e45a14facbe128f70::getLoader()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/bin/hyperf.php(13): require('/mnt/c/Code_clo...')
+#5 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php on line 28
+PHP Fatal error:  Uncaught TypeError: Return value of Hyperf\Utils\ApplicationContext::getContainer() must be an instance of Psr\Container\ContainerInterface, null returned in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php:28
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/app/helper.php(15): Hyperf\Utils\ApplicationContext::getContainer()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(69): require('/mnt/c/Code_clo...')
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(59): composerRequireb653e6933471d96e45a14facbe128f70()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/autoload.php(7): ComposerAutoloaderInitb653e6933471d96e45a14facbe128f70::getLoader()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/bin/hyperf.php(13): require('/mnt/c/Code_clo...')
+#5 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php on line 28
+PHP Fatal error:  Uncaught TypeError: Return value of Hyperf\Utils\ApplicationContext::getContainer() must be an instance of Psr\Container\ContainerInterface, null returned in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php:28
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/app/helper.php(15): Hyperf\Utils\ApplicationContext::getContainer()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(69): require('/mnt/c/Code_clo...')
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(59): composerRequireb653e6933471d96e45a14facbe128f70()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/autoload.php(7): ComposerAutoloaderInitb653e6933471d96e45a14facbe128f70::getLoader()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/bin/hyperf.php(13): require('/mnt/c/Code_clo...')
+#5 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php on line 28
+PHP Fatal error:  Uncaught TypeError: Return value of Hyperf\Utils\ApplicationContext::getContainer() must be an instance of Psr\Container\ContainerInterface, null returned in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php:28
+Stack trace:
+#0 /mnt/c/Code_cloud/hyperf-skeleton/app/helper.php(15): Hyperf\Utils\ApplicationContext::getContainer()
+#1 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(69): require('/mnt/c/Code_clo...')
+#2 /mnt/c/Code_cloud/hyperf-skeleton/vendor/composer/autoload_real.php(59): composerRequireb653e6933471d96e45a14facbe128f70()
+#3 /mnt/c/Code_cloud/hyperf-skeleton/vendor/autoload.php(7): ComposerAutoloaderInitb653e6933471d96e45a14facbe128f70::getLoader()
+#4 /mnt/c/Code_cloud/hyperf-skeleton/bin/hyperf.php(13): require('/mnt/c/Code_clo...')
+#5 {main}
+  thrown in /mnt/c/Code_cloud/hyperf-skeleton/vendor/hyperf/utils/src/ApplicationContext.php on line 28
