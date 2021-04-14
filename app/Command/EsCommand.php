@@ -117,15 +117,22 @@ class EsCommand extends HyperfCommand
                         "age"         => ["type" => "integer"],
                         "password"    => ["type" => "integer"],
                         "descirption" => [
-                            "type"        => "nested",
+                            "type"       => "nested",
                             "properties" => [
                                 "price" => [
-                                    "type"    => "keyword",
-                                    "copy_to" => "de_id"
+                                    "type"      => "integer",
+                                    "copy_to"   => "de_price",
                                 ],
                                 "sex"   => [
                                     "type"    => "text",
-                                    "copy_to" => "de_sex"
+                                    "copy_to" => "de_sex",
+
+                                    /**
+                                     * 使用聚會时需要添加该字段(请注意，这可能会占用大量内存)
+                                     *      Fielddata针对text字段在默认时是禁用的
+                                     * @see https://www.cnblogs.com/sanduzxcvbnm/p/12092298.html
+                                     */
+                                    // "fielddata" => true
                                 ]
                             ]
                         ],

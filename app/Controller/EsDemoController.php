@@ -75,6 +75,10 @@ class EsDemoController
         return $result = $this->client->search($params);
     }
 
+    /**
+     * query filter在性能上对比：filter是不计算相关性的，同时可以cache。因此，filter速度要快于query。
+     */
+
     protected function searchNestedSex()
     {
         $params = [
@@ -101,5 +105,78 @@ class EsDemoController
         ];
 
         return $this->client->search($params);
+    }
+
+    /**
+     * Notes: 统计所有的子文档并统计总数
+     * Date: 2021/4/14 19:09
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function getNestedAllByCount()
+    {
+        $params = [
+            "index" => "es_hyperf_demos",
+            "body"  => [
+                "query" => [
+                    "nested" => [
+                        "path"  => "descirption",
+                        "query" => [
+                            "match_all" => new \stdClass()
+                        ]
+                    ]
+                ],
+                "aggs"  => [
+                    "nested_count" => [
+                        "nested" => [
+                            "path" => "descirption"
+                        ],
+                        "aggs"   => [
+                            "count" => [
+                                "value_count" => [
+                                    "field" => "descirption.price"
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ];
+
+        $result = $this->client->search($params);
+
+        return success($result);
+    }
+
+    /**
+     * Notes: 只统计子文档的个数
+     * Date: 2021/4/14 19:30
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function getNestedCount()
+    {
+        $params = [
+            "index" => "es_hyperf_demos",
+            "body"  => [
+                "size" => 0, //等于0表示只获取聚合结果，而不需要执行觉和的原始数据；
+                "aggs" => [ // 固定语法，对一份数据执行分组聚合操作；
+                    "nested_count" => [ // 聚合的名字，是自己取的；
+                        "nested" => [
+                            "path" => "descirption"
+                        ],
+                        "aggs"   => [
+                            "count" => [
+                                "value_count" => [
+                                    "field" => "descirption.price" // 根据指定的字段进行统计；
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ];
+
+        $result = $this->client->search($params);
+
+        return success($result);
     }
 }
