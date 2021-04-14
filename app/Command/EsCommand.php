@@ -56,17 +56,25 @@ class EsCommand extends HyperfCommand
             $this->createIndices();
             $this->info("索引创建成功，准备添加数据");
 
-            try {
-                $this->bulk();
-                $this->info("数据添加成功");
-            } catch (ClientErrorResponseException $exception) {
-                $this->error("数据添加失败");
-            }
-            return "successfull";
+        } else {
+
+            $this->info("索引 {$this->index} 已存在，准备删除重新创建");
+            $this->deleteIndices();
+            $this->info("删除成功，准备创建");
+            $this->reindex();
+            $this->info("创建成功，准备添加数据");
+
         }
 
-        $this->info("索引 {$this->index} 已存在");
+        try {
+            $this->bulk();
+            $this->info("数据添加成功");
+        } catch (ClientErrorResponseException $exception) {
+            $this->error("数据添加失败");
+        }
+
         return "ok";
+
     }
 
     public function createIndices()
@@ -91,6 +99,58 @@ class EsCommand extends HyperfCommand
         ];
 
         $this->client->indices()->create($params);
+    }
+
+    public function reindex()
+    {
+        $params = [
+            "index" => $this->index . "_0",
+            "body"  => [
+                "settings" => [
+                    "number_of_shards"   => 1,
+                    "number_of_replicas" => 0,
+                ],
+                "mappings" => [
+                    "dynamic"    => false,
+                    "properties" => [
+                        "name"        => ["type" => "text"],
+                        "age"         => ["type" => "integer"],
+                        "password"    => ["type" => "integer"],
+                        "descirption" => [
+                            "type"        => "nested",
+                            "properties" => [
+                                "price" => [
+                                    "type"    => "keyword",
+                                    "copy_to" => "de_id"
+                                ],
+                                "sex"   => [
+                                    "type"    => "text",
+                                    "copy_to" => "de_sex"
+                                ]
+                            ]
+                        ],
+                        "created_at"  => [
+                            "type"   => "date",
+                            "format" => "yyyy-MM-dd HH:mm:ss"
+                        ]
+                    ]
+                ],
+                "aliases"  => [$this->index => new \stdClass()]
+            ]
+        ];
+
+        $this->client->indices()->create($params);
+    }
+
+    public function deleteIndices()
+    {
+        $result = $this->client->indices()->getAliases(["index" => $this->index]);
+
+        if ($result && is_array($result)) {
+            $indexName = current(array_keys($result));
+        }
+
+        $this->client->indices()->delete(["index" => $indexName]);
     }
 
     public function bulk()
