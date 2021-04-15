@@ -120,12 +120,16 @@ class EsCommand extends HyperfCommand
                             "type"       => "nested",
                             "properties" => [
                                 "price" => [
-                                    "type"      => "integer",
-                                    "copy_to"   => "de_price",
+                                    "type"    => "integer",
+                                    "copy_to" => "de_price",
                                 ],
                                 "sex"   => [
-                                    "type"    => "text",
-                                    "copy_to" => "de_sex",
+                                    "type"            => "text",
+                                    "analyzer"        => "ik_max_word", // 字段文本的分词器
+                                    "search_analyzer" => "ik_max_word", // 搜索词的分词器
+                                    "copy_to"         => "de_sex",
+
+                                    // ik_max_word分词器是插件ik提供的，可以对文本进行最大数量的分词。
 
                                     /**
                                      * 使用聚會时需要添加该字段(请注意，这可能会占用大量内存)

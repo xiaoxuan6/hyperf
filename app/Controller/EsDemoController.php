@@ -31,10 +31,19 @@ class EsDemoController
     {
         $data = [
             "price" => rand(10, 100),
-            "sex"   => rand(0, 1) ? "M" : "N"
+//            "sex"   => rand(0, 1) ? "M" : "N"
+            "sex"   => rand(0, 1) ? "性别：男" : "性别：女"
         ];
 
-        Oauth::query()->create(["name" => time(), "age" => rand(10, 100), "password" => str_pad((string)rand(0, 9999), 4, "0"), "descirption" => $data]);
+        $oauth = Oauth::query()->create(["name" => time(), "age" => rand(10, 100), "password" => str_pad((string)rand(0, 9999), 4, "0"), "descirption" => $data]);
+
+        $params = [
+            "index" => "es_hyperf_demos",
+            "id"    => $oauth->id,
+            "body"  => $oauth->toArray()
+        ];
+
+        $this->client->index($params);
 
         return success("添加成功");
     }
@@ -85,13 +94,14 @@ class EsDemoController
             "index" => "es_hyperf_demos",
             "body"  => [
                 "query" => [
-                   "nested" => [
+                    "nested" => [
                         "path"  => "descirption",
                         "query" => [
                             "bool" => [
                                 "must" => [
                                     "match" => [
-                                        "descirption.sex" => "N"
+//                                        "descirption.sex" => "N"
+                                        "descirption.sex" => "女"
                                         // 使用 copy_to 字段不需要使用 nested 搜索
 //                                        "de_sex" => 'M'
 //                                        "de_id" => 100
