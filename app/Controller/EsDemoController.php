@@ -55,6 +55,45 @@ class EsDemoController
     }
 
     /**
+     * Notes: 修改索引映射字段（允许你向现有索引添加字段，或者仅更改现有字段的搜索设置。）
+     * Date: 2021/4/15 19:07
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function putMapping()
+    {
+        $result = $this->client->indices()->getAliases(["index" => "es_hyperf_demos"]);
+
+        if ($result && is_array($result)) {
+            $index = current(array_keys($result));
+        }
+
+        $this->client->indices()->close(["index" => $index]);
+
+        $params = [
+            "index" => "es_hyperf_demos",
+            "body"  => [
+                "dynamic"    => false,
+                "properties" => [
+                    "name"        => [
+                        "type"   => "text",
+                        "fields" => [
+                            "raw" => [
+                                "type" => "keyword"
+                            ]
+                        ]
+                    ],
+                ]
+            ]
+        ];
+
+        $result = $this->client->indices()->putMapping($params);
+
+        $this->client->indices()->open(["index" => $index]);
+
+        return success($result);
+    }
+
+    /**
      * Notes: 测试 ignore_above 是否有效（mapping 字段类型只针对 keyword 有效）
      * Date: 2021/4/15 15:30
      * @param RequestInterface $request
