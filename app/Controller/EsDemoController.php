@@ -60,19 +60,28 @@ class EsDemoController
      * @param RequestInterface $request
      * @return \Psr\Http\Message\ResponseInterface
      */
+    /**
+     * keyword 和 text 的区别：
+     *      keyword 不支持全文搜索。所以，只能是使用精确匹配进行查询，比如 term 查询。
+     *     text 默认支持全文搜索。比如 match 查询
+     */
     public function searchParams(RequestInterface $request)
     {
         $params = [
             "index" => "es_hyperf_demos",
             "body"  => [
                 "query" => [
-                    "bool" => [
+                    "term" => [
+                        "class" => $request->input("class", "vinhson")
+                    ],
+                    // 添加 class = 你好啊， 使用如下是搜不出来结果的，keyword不支持分词查找
+                    /*"bool" => [
                         "must" => [
                             "match" => [
-                                "class" => $request->input("class", "vinhson")
+                                "class" => "你好"
                             ]
                         ]
-                    ]
+                    ]*/
                 ]
             ]
         ];
