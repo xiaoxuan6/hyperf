@@ -36,7 +36,7 @@ class EsDemoController
         ];
 
         $oauth = Oauth::query()->create([
-            "name"        => time(),
+            "name"        => $request->input("name", time()),
             "age"         => rand(10, 100),
             "password"    => str_pad((string)rand(0, 9999), 4, "0"),
             "descirption" => $data,
@@ -52,6 +52,40 @@ class EsDemoController
         $this->client->index($params);
 
         return success("添加成功");
+    }
+
+    /**
+     * Notes: 使用聚合对文档进行分组统计
+     * Date: 2021/4/15 19:32
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function searchFields()
+    {
+        $params = [
+            "index" => "es_hyperf_demos",
+            "body"  => [
+                "query" => [
+                    "bool" => [
+                        "must" => [
+                            "match" => [
+                                "name" => "eto"
+                            ]
+                        ]
+                    ]
+                ],
+                "aggs" => [
+                    "name_count" => [
+                        "terms" => [
+                            "field" => "name.raw"
+                        ]
+                    ]
+                ]
+            ]
+        ];
+
+        $result = $this->client->search($params);
+
+        return success($result);
     }
 
     /**
@@ -74,7 +108,7 @@ class EsDemoController
             "body"  => [
                 "dynamic"    => false,
                 "properties" => [
-                    "name"        => [
+                    "name" => [
                         "type"   => "text",
                         "fields" => [
                             "raw" => [
