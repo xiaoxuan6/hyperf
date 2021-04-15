@@ -30,7 +30,7 @@ class EsDemoController
     public function create()
     {
         $data = [
-            "price" => 100,
+            "price" => rand(10, 100),
             "sex"   => rand(0, 1) ? "M" : "N"
         ];
 
@@ -85,7 +85,7 @@ class EsDemoController
             "index" => "es_hyperf_demos",
             "body"  => [
                 "query" => [
-                    "nested" => [
+                   "nested" => [
                         "path"  => "descirption",
                         "query" => [
                             "bool" => [
@@ -179,4 +179,49 @@ class EsDemoController
 
         return success($result);
     }
+
+    /**
+     * Notes: 搜索所有的子文档并且按照子文档中的price排序
+     * Date: 2021/4/15 9:59
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function getNestedAll()
+    {
+        $params = [
+            "index" => "es_hyperf_demos",
+            "body"  => [
+                "query" => [
+                    "nested" => [
+                        "path"  => "descirption",
+                        "query" => [
+                            "match_all" => new \stdClass()
+                        ]
+                    ]
+                ],
+                "sort"  => [
+                    "descirption.price" => [
+                        "order"         => "asc",
+                        "nested_path"   => "descirption",
+                        "nested_filter" => [
+                            "bool" => [
+                                "must" => [
+                                    "match_all" => new \stdClass()
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ];
+
+        $result = $this->client->search($params);
+
+        return success($result);
+    }
+
+    /**
+     * 总结：
+     *      1、嵌套文档进行增加、修改或者删除时，整个文档都要重新被索引。嵌套文档越多，这带来的成本就越大。
+     *      2、对嵌套文档排序或聚合操作的时候，必须在该操作里面添加搜索的条件，避免查询出来的数据和排序或聚合数据不一致
+     */
 }
