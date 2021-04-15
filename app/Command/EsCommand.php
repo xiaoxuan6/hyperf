@@ -143,6 +143,16 @@ class EsCommand extends HyperfCommand
                         "created_at"  => [
                             "type"   => "date",
                             "format" => "yyyy-MM-dd HH:mm:ss"
+                        ],
+                        "class"       => [
+                            "type"         => "keyword",
+                            "ignore_above" => 10,
+
+                            /**
+                             * 创建 mapping 时，可以为字符串（专指 keyword） 指定 ignore_above ，用来限定字符长度。超过 ignore_above 的字符会被存储，但不会被索引。
+                             * 注意，是字符长度，一个英文字母是一个字符，一个汉字也是一个字符。
+                             * @see https://www.letianbiji.com/elasticsearch/es7-ignore-above.html
+                             */
                         ]
                     ]
                 ],

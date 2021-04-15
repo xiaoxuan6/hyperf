@@ -54,14 +54,14 @@ class Oauth extends Model implements CacheableInterface, Authenticatable
      *
      * @var array
      */
-    protected $fillable = ["name", "age", "password", "descirption"];
+    protected $fillable = ["name", "age", "password", "descirption", "class"];
 
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = ['id' => 'integer', 'age' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime', "descirption" => "array"];
+    protected $casts = ['id' => 'integer', 'age' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime', "descirption" => "array", "class" => "string"];
 
     /**
      * Notes: 模型观察者

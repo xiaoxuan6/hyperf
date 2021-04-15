@@ -27,7 +27,7 @@ class EsDemoController
         return $response->raw('Hello Hyperf!');
     }
 
-    public function create()
+    public function create(RequestInterface $request)
     {
         $data = [
             "price" => rand(10, 100),
@@ -35,7 +35,13 @@ class EsDemoController
             "sex"   => rand(0, 1) ? "性别：男" : "性别：女"
         ];
 
-        $oauth = Oauth::query()->create(["name" => time(), "age" => rand(10, 100), "password" => str_pad((string)rand(0, 9999), 4, "0"), "descirption" => $data]);
+        $oauth = Oauth::query()->create([
+            "name"        => time(),
+            "age"         => rand(10, 100),
+            "password"    => str_pad((string)rand(0, 9999), 4, "0"),
+            "descirption" => $data,
+            "class"       => $request->input("class", "vinhson")
+        ]);
 
         $params = [
             "index" => "es_hyperf_demos",
@@ -46,6 +52,34 @@ class EsDemoController
         $this->client->index($params);
 
         return success("添加成功");
+    }
+
+    /**
+     * Notes: 测试 ignore_above 是否有效（mapping 字段类型只针对 keyword 有效）
+     * Date: 2021/4/15 15:30
+     * @param RequestInterface $request
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function searchParams(RequestInterface $request)
+    {
+        $params = [
+            "index" => "es_hyperf_demos",
+            "body"  => [
+                "query" => [
+                    "bool" => [
+                        "must" => [
+                            "match" => [
+                                "class" => $request->input("class", "vinhson")
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ];
+
+        $result = $this->client->search($params);
+
+        return success($result);
     }
 
     public function search()
