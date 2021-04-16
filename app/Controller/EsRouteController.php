@@ -217,4 +217,56 @@ class EsRouteController
      *      原因： 1. 太大会影响数据进行再平衡（例如发生故障后）时移动分片的速度。 2. 太大会影响查询速度。
      ******************************************************************************************************************************************/
 
+    public function addAlases()
+    {
+        // 添加别名
+        /*return success($this->client->indices()->updateAliases([
+            "body" => [
+                "actions" => [
+                    "add" => [
+                        "index" => $this->index,
+                        "alias" => $this->index . "_0"
+                    ]
+                ]
+            ]
+        ]));*/
+
+        // 将路由值与别名相关联
+        return success($this->client->indices()->updateAliases([
+            "body" => [
+                "actions" => [
+                    "add" => [
+                        "index"   => $this->index,
+                        "alias"   => $this->index . "_1",
+                        "routing" => "A"
+                    ]
+                ]
+            ]
+        ]));
+    }
+
+    /**
+     * Notes: 使用路由和别名关联搜索
+     * Date: 2021/4/16 16:42
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function searchRouting()
+    {
+        $params = [
+            "index" => $this->index . "_1", // 这里不需要使用 routing，应为声明别名和路由已经关联了
+            "body"  => [
+                "query" => [
+                    "bool" => [
+                        "filter" => [
+                            "term" => [
+                                "password" => 888888
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ];
+
+        return success($this->client->search($params));
+    }
 }
