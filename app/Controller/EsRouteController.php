@@ -194,7 +194,7 @@ class EsRouteController
     {
         $result = $this->client->get([
             "index"   => $this->index,
-            "routing" => "A",
+            "routing" => "A", // 这里没有该属性会报错
             "id"      => 1
         ]);
 
@@ -253,7 +253,7 @@ class EsRouteController
     public function searchRouting()
     {
         $params = [
-            "index" => $this->index . "_1", // 这里不需要使用 routing，应为声明别名和路由已经关联了
+            "index" => $this->index, // 这里不需要使用 routing，（这里只是测试：别名和路由已经关联）
             "body"  => [
                 "query" => [
                     "bool" => [
@@ -267,6 +267,21 @@ class EsRouteController
             ]
         ];
 
+        // 这样默认查询索引全部的分片，一样没有问题
+        /*$params = [
+            "index" => $this->index,
+            "body" => [
+                "query" => [
+                    "match_all" => new \stdClass()
+                ]
+            ]
+        ];*/
+
         return success($this->client->search($params));
     }
+
+    /*****************************************************************************
+     * 重要的事情：开始我们说的【使用路由之后，不管是对文档的 curd 都需要添加路由 routing，否则报错："reason":"routing is required for [es_hyperf_route]/[_doc]/[1]"】
+     * 这里只针对文档的操作，并不是所有查询接口都要加上routing。
+     *****************************************************************************/
 }
