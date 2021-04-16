@@ -64,7 +64,7 @@ class EsDemoController
         $params = [
             "index" => "es_hyperf_demos",
             "body"  => [
-                "query" => [
+                "query"   => [
                     "bool" => [
                         "must" => [
                             "match" => [
@@ -73,7 +73,15 @@ class EsDemoController
                         ]
                     ]
                 ],
-                "aggs" => [
+                "sort"    => [
+                    "name.raw" => "desc"
+                ],
+                "_source" => [
+                    "id",
+                    "name",
+                    "age",
+                ],
+                "aggs"    => [
                     "name_count" => [
                         "terms" => [
                             "field" => "name.raw"
@@ -136,7 +144,8 @@ class EsDemoController
     /**
      * keyword 和 text 的区别：
      *      keyword 不支持全文搜索。所以，只能是使用精确匹配进行查询，比如 term 查询。
-     *     text 默认支持全文搜索。比如 match 查询
+     *      text 默认支持全文搜索。比如 match 查询
+     *      text类型,用于全文索引. 使用 keyword 类型用于排序(sort) 或者聚合(aggregations)
      */
     public function searchParams(RequestInterface $request)
     {
