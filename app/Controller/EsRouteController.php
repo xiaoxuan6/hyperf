@@ -57,6 +57,40 @@ class EsRouteController
         return success("ok");
     }
 
+    /**
+     * Notes: 这里添加的数据 id = 1 并且分片id和 routing = A 的相同，所以会修改 routing = A 并且id = 1 的数据
+     * Date: 2021/4/16 16:16
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function store()
+    {
+        $params = [
+            "index"   => $this->index,
+            "routing" => "C",
+            "id"      => 1,
+            "body"    => [
+                "name"     => "test",
+                "age"      => 10000,
+                "password" => 66666,
+                "class"    => "no:10",
+            ]
+        ];
+
+        return success($this->client->index($params));
+    }
+
+    /**
+     * Notes:
+     * Date: 2021/4/16 16:07
+     * @return \Psr\Http\Message\ResponseInterface
+     *
+     * 弊端：
+     *      用户使用自定义routing可以控制文档的分配位置，从而达到将相似文档放在同一个或同一批分片的目的，
+     * 减少查询时的分片个数，提高查询速度。然而，这也意味着数据无法像默认情况那么均匀的分配到各分片和各节点上，
+     * 从而会导致各节点存储和读写压力分布不均，影响系统的性能和稳定性
+     *
+     * @see https://elasticsearch.cn/article/13572#tip5
+     */
     public function create()
     {
         $target = rand(0, 1);
@@ -137,13 +171,13 @@ class EsRouteController
         // 查询多个分片
         $params = [
             "index"   => $this->index,
-            "routing" => ["A", "B"],
+            "routing" => ["A", "B", "C"],
             "body"    => [
                 "query" => [
                     "bool" => [
                         "filter" => [
                             "term" => [
-                                "age" => 100
+                                "age" => 10000
                             ]
                         ]
                     ]
@@ -182,4 +216,5 @@ class EsRouteController
      *      建议不要超过 50GB。
      *      原因： 1. 太大会影响数据进行再平衡（例如发生故障后）时移动分片的速度。 2. 太大会影响查询速度。
      ******************************************************************************************************************************************/
+
 }
