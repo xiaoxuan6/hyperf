@@ -82,4 +82,9 @@ class Oauth extends Model implements CacheableInterface, Authenticatable
     {
         return self::query()->whereKey($key)->first();
     }
+
+    public function discuss()
+    {
+        return $this->hasMany(Discuss::class);
+    }
 }
