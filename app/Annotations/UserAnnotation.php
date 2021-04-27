@@ -31,4 +31,11 @@ class UserAnnotation extends AbstractAnnotation
      */
     protected $age;
 
+    public function __construct($value = null)
+    {
+        parent::__construct($value);
+
+        $this->bindMainProperty("name", $value);
+    }
+
 }

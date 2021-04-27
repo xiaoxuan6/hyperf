@@ -54,9 +54,12 @@ class AnnotationController
         return $response->raw('Hello Hyperf!');
     }
 
+    /**
+     * @UserAnnotation("test")
+     */
     public function getMethod()
     {
-        $obj = AnnotationCollector::getClassMethodAnnotation(self::class, "getAddress");
+        $obj = AnnotationCollector::getClassMethodAnnotation(self::class, "getMethod");
         var_dump($obj);
 
         return success("ok");
