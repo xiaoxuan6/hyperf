@@ -32,12 +32,13 @@ class AuthController extends AbstractController
 
     public function login()
     {
-        $name = $this->request->input("name");
-        $password = $this->request->input("password");
+//        $name = $this->request->input("name");
+//        $password = $this->request->input("password");
 
-        $oauth_id = Oauth::query()->where("name", $name)->where("password", $password)->value("id");
+        $name = request()->input("name");
+        $password = request()->input("password");
 
-        $token = $this->auth->guard()->login(Oauth::retrieveById($oauth_id));
+        $token = $this->auth->guard()->login(Oauth::login(["name" => $name, "password" => $password]));
 
         Log::info(__METHOD__ . " 生成token", compact("token"));
 
@@ -51,7 +52,9 @@ class AuthController extends AbstractController
      */
     public function check()
     {
-        $token = $this->request->header("token");
+//        $token = $this->request->header("token");
+//        $token = request()->header("token");
+        $token = request("token");
 
         $result = $this->auth->guard()->check($token);
 

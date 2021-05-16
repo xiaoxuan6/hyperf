@@ -78,6 +78,13 @@ class Oauth extends Model implements CacheableInterface, Authenticatable
         return $this->getKey();
     }
 
+    public static function login($where): ?Authenticatable
+    {
+        $id = self::query()->where($where)->value("id") ?? 0;
+
+        return self::retrieveById($id);
+    }
+
     public static function retrieveById($key): ?Authenticatable
     {
         return self::query()->whereKey($key)->first();

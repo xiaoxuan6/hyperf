@@ -53,6 +53,35 @@ if (!function_exists("queue")) {
     }
 }
 
+if (!function_exists("request")) {
+    /**
+     * Notes:
+     * Date: 2021/5/10 18:24
+     * @param null $key
+     * @param null $default
+     * @return mixed|null|\Hyperf\HttpServer\Contract\RequestInterface|string
+     */
+    function request($key = null, $default = null)
+    {
+        if (is_null($key)) {
+            return app(Hyperf\HttpServer\Contract\RequestInterface::class);
+        }
+
+        $value = "";
+        if ($inputVal = app(Hyperf\HttpServer\Contract\RequestInterface::class)->input($key)) {
+            $value = $inputVal;
+        } elseif ($postVal = app(Hyperf\HttpServer\Contract\RequestInterface::class)->post($key)) {
+            $value = $postVal;
+        } elseif ($headerVal = app(Hyperf\HttpServer\Contract\RequestInterface::class)->header($key)) {
+            $value = $headerVal;
+        } elseif ($attributeVal = app(Hyperf\HttpServer\Contract\RequestInterface::class)->getAttribute($key)) {
+            $value = $attributeVal;
+        }
+
+        return is_null($value) ? $default : $value;
+    }
+}
+
 if (!function_exists("response")) {
     /**
      * Notes:
