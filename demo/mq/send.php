@@ -28,7 +28,7 @@ $channel->exchange_declare($exchangeName, 'direct', false, true, false);
 /**
  * passive: false 、是否检测同名队列
  * durable: false、是否开启队列持久化
- *auto_delete: true、通道关闭后是否删除队列
+ * auto_delete: true、通道关闭后是否删除队列
  */
 
 // 声明一个队列
