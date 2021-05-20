@@ -39,6 +39,16 @@ $callback = function ($msg) {
 
 // 开始消费队列数据
 $channel->basic_consume($queueName, '', false, true, false, false, $callback);
+/**
+ * @url http://www.iamlintao.com/6419.html
+ * queue：消息要取得消息的队列名
+ * consumer_tag：消费者标签
+ * no_local：这个功能属于AMQP的标准,但是rabbitMQ并没有做实现.
+ * no_ack：收到消息后,是否不需要回复确认即被认为被消费
+ * exclusive：排他消费者,即这个队列只能由一个消费者消费.适用于任务不允许进行并发处理的情况下.比如系统对接
+ * nowait：不返回执行结果,但是如果排他开启的话,则必须需要等待结果的,如果两个一起开就会报错
+ * callback：回调函数
+ */
 
 while (count($channel->callbacks)) {
     $channel->wait();
