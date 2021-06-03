@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Amqp\Producer\ChatMessageProducer;
 use App\Amqp\Producer\DemoProducer;
 use Hyperf\Amqp\Producer;
 use Hyperf\HttpServer\Annotation\AutoController;
@@ -27,7 +28,8 @@ class AMQPController
         $data = __METHOD__ . " 你好";
 
         $proucer = ApplicationContext::getContainer()->get(Producer::class);
-        $proucer->produce(new DemoProducer($data));
+//        $proucer->produce(new DemoProducer($data));
+        $proucer->produce(new ChatMessageProducer($data));
 
         return success($data);
     }
