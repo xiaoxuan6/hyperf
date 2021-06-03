@@ -6,22 +6,18 @@
  * Time: 15:10
  */
 
-require_once "../../vendor/autoload.php";
-require_once "../autoload.php";
-
-use PhpAmqpLib\Connection\AMQPStreamConnection;
-
-$config = AMQP_CONDIG;
-
-$connection = new AMQPStreamConnection($config["host"], $config["port"], $config["user"], $config["password"]);
-$channel = $connection->channel();
+/**
+ * @var $connection PhpAmqpLib\Connection\AMQPStreamConnection
+ * @var $channel PhpAmqpLib\Channel\AMQPChannel
+ */
+list($connection, $channel) = require_once "amqp.php";
 
 $channel->exchange_declare(ROUTE_EXCHANGE, \Hyperf\Amqp\Message\Type::DIRECT, false, false, false);
 
 list($queue_name, ,) = $channel->queue_declare("", false, false, false, false);
 
 $severities = array_slice($argv, 1);
-if(empty($severities )) {
+if (empty($severities)) {
     file_put_contents('php://stderr', "Usage: $argv[0] [info] [warning] [error]\n");
     exit(1);
 }

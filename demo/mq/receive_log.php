@@ -6,15 +6,11 @@
  * Time: 13:49
  */
 
-require_once "../../vendor/autoload.php";
-require_once "../autoload.php";
-
-use PhpAmqpLib\Connection\AMQPStreamConnection;
-
-$config = AMQP_CONDIG;
-
-$connection = new AMQPStreamConnection($config["host"], $config["port"], $config["user"], $config["password"]);
-$channel = $connection->channel();
+/**
+ * @var $connection PhpAmqpLib\Connection\AMQPStreamConnection
+ * @var $channel PhpAmqpLib\Channel\AMQPChannel
+ */
+list($connection, $channel) = require_once "amqp.php";
 
 $channel->exchange_declare("log", \Hyperf\Amqp\Message\Type::FANOUT, false, false, false);
 

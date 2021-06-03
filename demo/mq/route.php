@@ -7,21 +7,16 @@
  * Time: 11:52
  */
 
-require_once "../../vendor/autoload.php";
-require_once "../autoload.php";
-
-use PhpAmqpLib\Connection\AMQPStreamConnection;
-use PhpAmqpLib\Message\AMQPMessage;
-
-$config = AMQP_CONDIG;
-
-$connection = new AMQPStreamConnection($config["host"], $config["port"], $config["user"], $config["password"]);
-$channel = $connection->channel();
+/**
+ * @var $connection PhpAmqpLib\Connection\AMQPStreamConnection
+ * @var $channel PhpAmqpLib\Channel\AMQPChannel
+ */
+list($connection, $channel) = require_once "amqp.php";
 
 $channel->exchange_declare(ROUTE_EXCHANGE, \Hyperf\Amqp\Message\Type::DIRECT, false, false, false);
 
 $data = "Hello World!";
-$msg = new AMQPMessage($data);
+$msg = new \PhpAmqpLib\Message\AMQPMessage($data);
 
 $routing_key = ROUTE_KEY[array_rand(ROUTE_KEY, 1)];
 $channel->basic_publish($msg, ROUTE_EXCHANGE, $routing_key);

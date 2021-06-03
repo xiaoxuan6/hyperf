@@ -7,16 +7,11 @@
  * Time: 11:52
  */
 
-require_once "../../vendor/autoload.php";
-require_once "../autoload.php";
-
-use PhpAmqpLib\Connection\AMQPStreamConnection;
-use PhpAmqpLib\Message\AMQPMessage;
-
-$config = AMQP_CONDIG;
-
-$connection = new AMQPStreamConnection($config["host"], $config["port"], $config["user"], $config["password"]);
-$channel = $connection->channel();
+/**
+ * @var $connection PhpAmqpLib\Connection\AMQPStreamConnection
+ * @var $channel PhpAmqpLib\Channel\AMQPChannel
+ */
+list($connection, $channel) = require_once "amqp.php";
 
 /**
  * 这里只声明交换机，没有声明队列名，也没有将交换机和队列名进行绑定（队列名为空，会随机生成）
@@ -26,7 +21,7 @@ $channel->exchange_declare("log", \Hyperf\Amqp\Message\Type::FANOUT, false, fals
 
 $data = implode(' ', array_slice($argv, 1));
 if(empty($data)) $data = "info: Hello World!";
-$message = new AMQPMessage($data);
+$message = new \PhpAmqpLib\Message\AMQPMessage($data);
 
 $channel->basic_publish($message, "log");
 
