@@ -25,6 +25,9 @@ list($queue_name,,) = $channel->queue_declare("", false, false, false, false);
 echo ' [x] queue name :', $queue_name, "\n";
 
 $channel->queue_bind($queue_name, "log");
+/**
+ * 绑定时：第三个参数为路由，当交换机类型为：fanout 会被忽略
+ */
 
 echo ' [*] Waiting for logs. To exit press CTRL+C', "\n";
 

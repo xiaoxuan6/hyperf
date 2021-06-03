@@ -1,6 +1,6 @@
 <?php
 /**
- * 发布/订阅 （交换机）
+ * 发布/订阅 （扇型交换机,它能做的仅仅是广播）
  * Created by PhpStorm.
  * User: james.xue
  * Date: 2021/6/3
