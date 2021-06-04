@@ -27,6 +27,10 @@ class ChatMessageConsumer extends ConsumerMessage
     public function consumeMessage($data, AMQPMessage $message): string
     {
         Log::info(__METHOD__ . " 消费队列", [$data]);
+
+        $server = server();
+        $server->exist($data["fd"]) && $server->push($data["fd"], $data["data"]);
+
         return Result::ACK;
     }
 }
