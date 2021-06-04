@@ -37,3 +37,9 @@ Router::addGroup("/oauth/", function () {
 
 //Router::get("/config/get", "App\Controller\ConfigController@index");
 //Router::get("/config/update", "App\Controller\ConfigController@update");
+
+// webSocket 链接
+//这里的ws值取决于您在config/autoload/server.php内配置的 WebSocket Server 的name值。
+Router::addServer('ws', function () {
+    Router::get('/', 'App\Controller\WebSocketController');
+});

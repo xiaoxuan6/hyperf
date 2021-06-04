@@ -120,3 +120,13 @@ if (!function_exists("fail")) {
         return response()->json(["code" => $code, "data" => $data]);
     }
 }
+
+/**
+ * Notes: Server 实例 基于 Swoole Server
+ * Date: 2021/5/18 17:45
+ * @return \Swoole\Coroutine\Server|\Swoole\Server
+ */
+function server()
+{
+    return app()->get(\Hyperf\Server\ServerFactory::class)->getServer()->getServer();
+}
