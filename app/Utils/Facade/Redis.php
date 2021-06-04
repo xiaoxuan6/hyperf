@@ -24,6 +24,7 @@ use Hyperf\Redis\RedisFactory;
  * @method static multi($mode = \Redis::MULTI)
  *
  * @method static hget(string $key)
+ * @method static hset(string $key)
  * @method static hgetAll(string $key)
  */
 class Redis extends Facade

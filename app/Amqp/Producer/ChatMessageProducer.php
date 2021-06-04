@@ -20,12 +20,13 @@ class ChatMessageProducer extends ProducerMessage
 
     protected $routingKey = "demo:chat:routing";
 
-    public function __construct($fd, $data)
+    public function __construct($userId, $fd, $data)
     {
 
         $message = [
-            "fd"   => $fd,
-            "data" => $data
+            "userId" => $userId,
+            "fd"     => $fd,
+            "data"   => $data
         ];
         Log::info(__METHOD__ . " 生产队列", [$message]);
 

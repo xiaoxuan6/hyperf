@@ -11,6 +11,7 @@ use Hyperf\HttpServer\Annotation\AutoController;
 use Hyperf\HttpServer\Annotation\Middleware;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
+use Hyperf\View\RenderInterface;
 use Qbhy\HyperfAuth\AuthManager;
 use App\Middleware\AuthMiddleware;
 
@@ -19,9 +20,9 @@ use App\Middleware\AuthMiddleware;
  */
 class AuthController extends AbstractController
 {
-    public function index(RequestInterface $request, ResponseInterface $response)
+    public function index(RenderInterface $render)
     {
-        return $response->raw('Hello Hyperf!');
+        return $render->render("login");
     }
 
     /**
@@ -35,14 +36,16 @@ class AuthController extends AbstractController
 //        $name = $this->request->input("name");
 //        $password = $this->request->input("password");
 
-        $name = request()->input("name");
+        $name = request()->input("name") ?? request()->input("email");
         $password = request()->input("password");
 
-        $token = $this->auth->guard()->login(Oauth::login(["name" => $name, "password" => $password]));
+        if (!$user = Oauth::login(["name" => $name, "password" => $password]))
+            return $this->outResponse(__LINE__, "无效的账号密码");
 
-        Log::info(__METHOD__ . " 生成token", compact("token"));
+        $token = $this->auth->guard()->login($user);
 
-        return $this->outResponse(200, compact("token"));
+        $id = $user->id;
+        return $this->outResponse(200, compact("id", "token"));
     }
 
     /**
