@@ -40,6 +40,12 @@ Router::addGroup("/oauth/", function () {
 
 // webSocket 链接
 //这里的ws值取决于您在config/autoload/server.php内配置的 WebSocket Server 的name值。
-Router::addServer('ws', function () {
-    Router::get('/', 'App\Controller\WebSocketController');
+//Router::addServer('ws', function () {
+//    Router::get('/', 'App\Controller\WebSocketController');
+//});
+
+Router::addServer("ws", function () {
+    Router::get("/", "App\Controller\Api\WebsocketServerController", [
+        "middleware" => [\App\Middleware\WebsocketAuthMiddleware::class]
+    ]);
 });

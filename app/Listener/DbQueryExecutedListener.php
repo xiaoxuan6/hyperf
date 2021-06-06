@@ -47,15 +47,15 @@ class DbQueryExecutedListener implements ListenerInterface
      */
     public function process(object $event)
     {
-        if ($event instanceof QueryExecuted) {
-            $sql = $event->sql;
-            if (! Arr::isAssoc($event->bindings)) {
-                foreach ($event->bindings as $key => $value) {
-                    $sql = Str::replaceFirst('?', "'{$value}'", $sql);
-                }
-            }
-
-            $this->logger->info(sprintf('[%s] %s', $event->time, $sql));
-        }
+//        if ($event instanceof QueryExecuted) {
+//            $sql = $event->sql;
+//            if (! Arr::isAssoc($event->bindings)) {
+//                foreach ($event->bindings as $key => $value) {
+//                    $sql = Str::replaceFirst('?', "'{$value}'", $sql);
+//                }
+//            }
+//
+//            $this->logger->info(sprintf('[%s] %s', $event->time, $sql));
+//        }
     }
 }
