@@ -8,9 +8,8 @@
 
 namespace App\Controller\Api;
 
-use App\Model\ChatList;
-use App\Model\Oauth;
-use App\Utils\Facade\Log;
+use App\Services\MessageHandleService;
+use App\Services\SocketClientService;
 use Hyperf\Contract\OnCloseInterface;
 use Hyperf\Contract\OnMessageInterface;
 use Hyperf\Contract\OnOpenInterface;
@@ -36,6 +35,12 @@ class WebsocketServerController implements OnMessageInterface, OnOpenInterface, 
     protected $socketClientService;
 
     /**
+     * @Inject()
+     * @var MessageHandleService
+     */
+    protected $messageHandleService;
+
+    /**
      * @param Response|Server $server
      */
     public function onClose($server, int $fd, int $reactorId): void
@@ -55,38 +60,9 @@ class WebsocketServerController implements OnMessageInterface, OnOpenInterface, 
     {
         // 当前客户端fd
         $fd = $frame->fd;
-
         $data = json_decode($frame->data, true);
 
-        // 获取接收者的id
-        if (isset($data["receive_user"])) {
-            $userId = $data["receive_user"];
-            $currentUserId = $this->socketClientService->getUserId($fd);
-        } else {
-            $currentUserId = $userId = $this->socketClientService->getUserId($fd);
-        }
-
-        // 获取当前发送者的用户信息
-        $userInfo = Oauth::query()->select(["id", "name"])->whereKey($currentUserId)->first();
-
-        // 获取接收者的fd
-        $fds = $this->socketClientService->findFdByUserId($userId);
-
-        $data = isset($data["data"]) ? $data["data"] : $frame->data;
-
-        // 添加聊天记录
-        ChatList::saveChatRecord($currentUserId, $userId, $data);
-
-        $message = json_encode(["data" => $data, "username" => $userInfo->name], JSON_UNESCAPED_UNICODE);
-        $this->socketPushNotify($fds, $message);
-    }
-
-    private function socketPushNotify($fds, $message)
-    {
-        $server = server();
-        foreach ($fds as $fd) {
-            $server->exist($fd) && $server->push($fd, $message);
-        }
+        $this->messageHandleService->onConsumeTalk($fd, $frame, $data);
     }
 
     /**

@@ -15,6 +15,7 @@ class CreateUserFriendTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedInteger("oauth_id")->comment("用户1");
             $table->unsignedInteger("user_id")->comment("用户2");
+            $table->unsignedTinyInteger("status")->comment("状态 0非好友 1好友");
             $table->timestamps();
         });
     }

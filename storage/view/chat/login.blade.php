@@ -7,7 +7,7 @@
 </head>
 <div style="display: table; width: 100%; height: 100%;">
     <div style="display:table-cell;vertical-align:middle;">
-        <div style="width: 30%; height: 40%; border: black 2px solid;  margin: 0 auto; text-align: center">
+        <div style="width: 20%; height: 30%; border: black 2px solid;  margin: 0 auto; text-align: center">
             <div style="height: 50px;"><h1>登录</h1></div>
             邮箱：<input type="text" name="name" id="name"><br><br>
             密码：<input type="password" name="password" id="password"><br><br>

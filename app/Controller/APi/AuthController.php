@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace App\Controller\Api;
 
-use App\Controller\AbstractController;
 use App\Model\Oauth;
+use Hyperf\Contract\StdoutLoggerInterface;
 use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpServer\Annotation\AutoController;
-use Qbhy\HyperfAuth\AuthManager;
 
 /**
  * @AutoController(prefix="api/auth")
@@ -17,9 +16,9 @@ class AuthController extends AbstractController
 {
     /**
      * @Inject()
-     * @var AuthManager
+     * @var StdoutLoggerInterface
      */
-    protected $auth;
+    protected $log;
 
     public function login()
     {

@@ -6,7 +6,7 @@
  * Time: 19:48
  */
 
-namespace App\Controller\APi;
+namespace App\Services;
 
 use App\Utils\Facade\Redis;
 

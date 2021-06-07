@@ -51,6 +51,7 @@ class WebsocketAuthMiddleware implements MiddlewareInterface
 
         $request = Context::get(ServerRequestInterface::class);
         $request = $request->withAttribute("userInfo", $userInfo);
+        $request = $request->withAttribute("uid", $userInfo->id);
 
         Context::set(ServerRequestInterface::class, $request);
 

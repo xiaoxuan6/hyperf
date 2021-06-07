@@ -55,21 +55,60 @@
             昵称：{{$userInfo['name']}}
         </div>
         <input type="hidden" id="username" value="{{$userInfo["name"]}}">
-        <div style="text-align: center; height: 30px; border-bottom: #636b6f 1px solid; line-height: 30px">
+        <div class="friend-apply-notice friend"
+             style="text-align: center; height: 30px; border-bottom: #636b6f 1px solid; line-height: 30px;">
+            消息通知
+        </div>
+        <div class="friend-apply friend"
+             style="text-align: center; height: 30px; border-bottom: #636b6f 1px solid; line-height: 30px;">
             添加好友
         </div>
-        <div style="text-align: center; height: 30px; border-bottom: #636b6f 1px solid; line-height: 30px">好友列表</div>
-        <ul>
-            @foreach($userFriend as $value)
-                <li value="{{$value['id']}}" class="user" style="border: #636b6f 1px solid">{{$value['name']}}</li>
-            @endforeach
-        </ul>
-        <div class="logout" style="border-top: #636b6f 1px solid; text-align: center; height: 60px; position: absolute; bottom: 0; width: 100%; line-height: 60px">
+        <div class="friend-list friend"
+             style="text-align: center; height: 30px; border-bottom: #636b6f 1px solid; line-height: 30px">好友列表
+        </div>
+        <div style="display: none" class="friends-list">
+            <ul style="text-align: center">
+                @foreach($userFriend as $value)
+                    <li value="{{$value['id']}}" class="user" style="border-bottom: #636b6f 1px dashed; list-style: none; width: 100%">{{$value['name']}}</li><br>
+                @endforeach
+            </ul>
+        </div>
+        <div class="logout"
+             style="border-top: #636b6f 1px solid; text-align: center; height: 60px; position: absolute; bottom: 0; width: 100%; line-height: 60px">
             退出
         </div>
     </div>
-    <div style="width: 500px; height: 95%; border: black 1px solid; text-align: center; display:table;" class="content-parent">
+    <div style="width: 500px; height: 95%; border: black 1px solid; text-align: center; display:table;"
+         class="content-parent">
         <div style="display:table-cell;vertical-align:middle;">请选择聊天对象</div>
+    </div>
+    <div style="width: 500px; height: 95%; border: black 1px solid; display:none;" class="friend-search">
+        <div style="height: 63px; margin-top: 60px; border-bottom: black 1px solid;text-align: center; ">
+            <input type="text" name="apply" class="apply" value="" style="width: 70%; height: 30px" placeholder="好友账号">&nbsp;&nbsp;<button
+                    style="height: 30px; width: 15%" class="apply-search">搜索
+            </button>
+        </div>
+        <div class="apply-list" style="margin: 0; display: none">
+            <div style="height: 50px; line-height: 50px; padding-left: 15px">
+                搜索结果：
+                <div style="text-align: center; width: 450px;" class="apply-user-list"></div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 500px; height: 95%; border: black 1px solid; display:none;" class="notice">
+        <div style="height: 52px; margin-top: 40px; border-bottom: black 1px solid;text-align: center; ">
+            <span style="height: 30px; width: 15%" class="apply-search">消息通知</span>
+        </div>
+        <div style="margin: 0;">
+            <div style="height: 50px; line-height: 50px; padding-left: 15px">
+                <div style="text-align: center; width: 450px;" id="apply-notice-list">
+                    @foreach($applyUser as $value)
+                        <div style="float: left"><storage>{{$value["oauth"]["name"]}}</storage></div><div style="float: right"><button value="{{$value["id"]}}" @if($value["status"] == 0) class="apply-user-agree"@endif>@if($value["status"] == 1)已同意@else同意@endif</button></div>
+                        <br>
+                    @endforeach
+                </div>
+            </div>
+        </div>
     </div>
     <div style="width: 500px; height: 95%; border: black 1px solid; display: none" class="content">
         <div style="width: 100%; height: 357px; border-bottom: #636b6f 2px solid">
@@ -105,10 +144,18 @@
 
     websocket.onmessage = function (e) {
         var data = JSON.parse(e.data);
-        var str = document.getElementById("recv").innerHTML;
-        $("#recv").html("");
-        $("#recv").append(str + "<br> 昵称：" + data["username"] + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + data['data'])
-        $("#recv").after("")
+
+        if (data['event'] == "talk_event") {
+            var str = document.getElementById("recv").innerHTML;
+            $("#recv").html("");
+            $("#recv").append(str + "<br> 昵称：" + data["username"] + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + data['data'])
+            $("#recv").after("")
+        }
+
+        if (data['event'] == "friend_apply_event") {
+            var str = "<div style=\"float: left\"><storage>" + data['name'] + " 申请添加您为好友</storage></div><div style=\"float: right\"><button value=" + data['id'] + " class=\"apply-user-agree\">同意</button></div><br>";
+            $("#apply-notice-list").append(str)
+        }
     }
 
     document.getElementById("send").onclick = function () {
@@ -134,17 +181,141 @@
         $("#recv").after("")
     }
 
-    $(".logout").click(function(){
+    $(".logout").click(function () {
         $.ajax({
-            "url":"/api/auth/logout",
-            "type":"post",
-            "success":function(e){
-                if(e.code == 0) {
+            "url": "/api/auth/logout",
+            "type": "post",
+            "success": function (e) {
+                if (e.code == 0) {
                     alert(e.msg);
-                    window.location.href="/api/home/index";
-                } else{
+                    window.location.href = "/api/home/index";
+                } else {
                     alert("退出失败");
                 }
+            }
+        })
+    });
+
+    $(".friend-apply-notice").click(function () {
+        $(this).parent().find(".friend").css("background", "white")
+        $(this).parent().find(".friend").css("color", "black")
+
+        $(this).css("background", "#636b6f")
+        $(this).css("color", "white")
+
+        $(".content-parent").css("display", "none")
+        $(".content").css("display", "none")
+        $(".friend-search").css("display", "none")
+        $(".notice").css("display", "table")
+    });
+
+    $(".friend-apply").click(function () {
+        $(this).parent().find(".friend").css("background", "white")
+        $(this).parent().find(".friend").css("color", "black")
+
+        $(this).css("background", "#636b6f")
+        $(this).css("color", "white")
+
+        $(".content-parent").css("display", "none")
+        $(".content").css("display", "none")
+        $(".friend-search").css("display", "table")
+        $(".notice").css("display", "none")
+    });
+
+    $(".friend-list").click(function () {
+        $(this).parent().find(".friend").css("background", "white")
+        $(this).parent().find(".friend").css("color", "black")
+
+        $(this).css("background", "#636b6f")
+        $(this).css("color", "white")
+
+        $(".content-parent").css("display", "table")
+        $(".content").css("display", "none")
+        $('.apply-list').css("display", "none")
+        $(".friend-search").css("display", "none")
+        $(".notice").css("display", "none")
+        $(".friends-list").css("display", "table");
+    });
+
+    $(".apply-search").click(function () {
+        var friendId = $(".apply").val();
+
+        $('.apply-list').css("display", "table")
+
+        if (!friendId) {
+            $(".apply-user-list").html("没有搜索到相关结果")
+            return;
+        }
+
+        $.ajax({
+            url: "/api/user/apply",
+            type: "post",
+            data: {
+                "friendId": friendId,
+                "token": token
+            },
+            success: function (e) {
+                if (e.code == 0) {
+                    var str = "<div style=\"float: left\"><storage>" + e.data.name + "</storage></div><div style=\"float: right\">";
+
+                    if (e.data.isfriend == 0) {
+                        str += "<button value=" + e.data.id + " class=\"apply-user\">添加</button></div>";
+                    }
+
+                    if (e.data.isfriend == 1) {
+                        str += "<button value=" + e.data.id + ">已申请</button></div>";
+                    }
+
+                    if (e.data.isfriend == 2){
+                        str += "<button value=" + e.data.id + ">已同意</button></div>";
+                    }
+
+                    $(".apply").val("")
+                    $(".apply-user-list").html(str)
+                } else {
+                    $(".apply-user-list").html(e.msg)
+                }
+            }
+        })
+    });
+
+    $(document).on("click", ".apply-user", function () {
+        // $(".apply-user").click(function(){ // jq动态生成HTML元素时，点击事件无效
+        var userId = $(this).attr("value")
+
+        $.ajax({
+            url: "/api/user/applyFriend",
+            type: "post",
+            data: {
+                "userId": userId,
+                "token": token
+            },
+            success: function (e) {
+                if(e.code == 0) {
+                    $(".apply-user").html("已申请");
+                    $(".apply-user").removeAttr("class");
+                }
+                alert(e.msg)
+            }
+        })
+    });
+
+    $(".apply-user-agree").click(function(){
+        var id = $(this).attr("value");
+
+        $.ajax({
+            url: "/api/user/applyFriendAgree",
+            type: "post",
+            data: {
+                "id": id,
+                "token": token
+            },
+            success: function (e) {
+                if(e.code == 0) {
+                    $(".apply-user-agree").html("已同意")
+                    $(".apply-user").removeAttr("class");
+                }
+                alert(e.msg)
             }
         })
     });
@@ -154,7 +325,13 @@
         $("#receive_user").attr("value", userId);
         $(".content").css("display", "table");
         $(".content-parent").css("display", "none");
+        $('.apply-list').css("display", "none")
+        $(".friend-search").css("display", "none")
+        $(".notice").css("display", "none")
+        $(this).parent().find(".user").css("font-weight", "")
+        $(this).css("font-weight", 900)
 
+        $("#recv").html("");
         var content = $("#recv").text();
         if (!content) {
             $.ajax({
@@ -170,7 +347,7 @@
                         len = data.length;
 
                         var str = "";
-                        for ($i = len-1; $i > -1; $i--) {
+                        for ($i = len - 1; $i > -1; $i--) {
                             str += "昵称：" + data[$i]["uid_name"] + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + data[$i]['content'] + "<br>";
                         }
 

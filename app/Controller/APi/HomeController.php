@@ -4,30 +4,31 @@ declare(strict_types=1);
 
 namespace App\Controller\Api;
 
+use App\Middleware\WebsocketAuthMiddleware;
 use App\Model\ChatList;
 use App\Model\Oauth;
 use App\Model\UserFriend;
+use App\Utils\Facade\Log;
+use Hyperf\Contract\StdoutLoggerInterface;
 use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpServer\Annotation\AutoController;
 use Hyperf\HttpServer\Annotation\Middleware;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\Utils\Arr;
 use Hyperf\View\RenderInterface;
-use App\Middleware\WebsocketAuthMiddleware;
-use Qbhy\HyperfAuth\AuthManager;
 
 /**
  * Class HomeController
  * @package App\Controller\Api
  * @AutoController(prefix="api/home")
  */
-class HomeController
+class HomeController extends AbstractController
 {
     /**
      * @Inject()
-     * @var AuthManager
+     * @var StdoutLoggerInterface
      */
-    protected $auth;
+    protected $log;
 
     public function index(RenderInterface $render)
     {
@@ -43,14 +44,19 @@ class HomeController
      */
     public function chat(RenderInterface $render, RequestInterface $request)
     {
+        // 当前用户信息
         $userInfo = $request->getAttribute("userInfo");
 
-        $oauthIds = UserFriend::query()->select("oauth_id as uid")->where("user_id", $userInfo->id)->get()->toArray();
-        $userIds = UserFriend::query()->select("user_id as uid")->where("oauth_id", $userInfo->id)->get()->toArray();
+        // 好友列表
+        $oauthIds = UserFriend::query()->select("oauth_id as uid")->where("user_id", $userInfo->id)->where("status", 1)->union(
+            UserFriend::query()->select("user_id as uid")->where("oauth_id", $userInfo->id)->where("status", 1)
+        )->get();
 
-        $userFriend = Oauth::query()->select(["id", "name"])->whereIn("id", array_unique(array_merge($oauthIds, $userIds)))->get();
+        $userFriend = Oauth::query()->select(["id", "name"])->whereIn("id", $oauthIds->pluck("uid")->toArray())->get();
 
-        return $render->render("chat.index", compact("userInfo", "userFriend"));
+        $applyUser = UserFriend::query()->where("user_id", $request->getAttribute("uid"))->with("oauth")->orderBy("id", "desc")->limit(5)->get();
+
+        return $render->render("chat.index", compact("userInfo", "userFriend", "applyUser"));
     }
 
     public function chatRecordList(RequestInterface $request)

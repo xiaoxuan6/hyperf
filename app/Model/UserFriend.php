@@ -1,9 +1,11 @@
 <?php
 
 declare (strict_types=1);
+
 namespace App\Model;
 
 use Hyperf\DbConnection\Model\Model;
+
 /**
  */
 class UserFriend extends Model
@@ -19,11 +21,16 @@ class UserFriend extends Model
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = ["oauth_id", "user_id", "status"];
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = ["oauth_id" => "integer", "user_id" => "integer", "status" => "integer"];
+
+    public function oauth()
+    {
+        return $this->belongsTo(Oauth::class, "oauth_id", "id");
+    }
 }
