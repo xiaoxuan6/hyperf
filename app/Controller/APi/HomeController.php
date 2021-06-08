@@ -7,8 +7,10 @@ namespace App\Controller\Api;
 use App\Middleware\WebsocketAuthMiddleware;
 use App\Model\ChatList;
 use App\Model\Oauth;
+use App\Model\UserChatList;
 use App\Model\UserFriend;
-use App\Utils\Facade\Log;
+use App\Services\UserChatListHandleService;
+use Carbon\Carbon;
 use Hyperf\Contract\StdoutLoggerInterface;
 use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpServer\Annotation\AutoController;
@@ -30,6 +32,12 @@ class HomeController extends AbstractController
      */
     protected $log;
 
+    /**
+     * @Inject()
+     * @var UserChatListHandleService
+     */
+    protected $userChatListHandleService;
+
     public function index(RenderInterface $render)
     {
         return $render->render("chat.login");
@@ -47,6 +55,19 @@ class HomeController extends AbstractController
         // 当前用户信息
         $userInfo = $request->getAttribute("userInfo");
 
+        // 好友聊天列表
+        $userChatList = UserChatList::query()->where("uid", $userInfo->getKey())->with(["friendUserInfo"])->get()->map(function (&$userChatList) {
+
+            $data = $this->userChatListHandleService->get($userChatList->uid, $userChatList->friend_id);
+
+            $userChatList->content = $data ? json_decode($data, true)["content"] : "";
+            $userChatList->updated_at = $data ? json_decode($data, true)["updated_at"] : $userChatList->updated_at;
+
+            return $userChatList;
+        })->toArray();
+
+        array_multisort(array_column($userChatList, "updated_at"), SORT_DESC, $userChatList);
+
         // 好友列表
         $oauthIds = UserFriend::query()->select("oauth_id as uid")->where("user_id", $userInfo->id)->where("status", 1)->union(
             UserFriend::query()->select("user_id as uid")->where("oauth_id", $userInfo->id)->where("status", 1)
@@ -54,17 +75,19 @@ class HomeController extends AbstractController
 
         $userFriend = Oauth::query()->select(["id", "name"])->whereIn("id", $oauthIds->pluck("uid")->toArray())->get();
 
-        $applyUser = UserFriend::query()->where("user_id", $request->getAttribute("uid"))->with("oauth")->orderBy("id", "desc")->limit(5)->get();
-
-        return $render->render("chat.index", compact("userInfo", "userFriend", "applyUser"));
+        return $render->render("chat.index", compact("userInfo", "userChatList", "userFriend"));
     }
 
+    /**
+     * Notes: 获取好友之间的聊天记录
+     * Date: 2021/6/8 14:24
+     * @param RequestInterface $request
+     * @return \Psr\Http\Message\ResponseInterface
+     */
     public function chatRecordList(RequestInterface $request)
     {
-        $token = $request->input("token");
+        $uid = $this->uid();
         $receive_id = $request->input("receive_id");
-
-        $uid = $this->auth->guard()->user($token)->getId();
 
         $chatList = ChatList::query()->where(function ($query) use ($uid, $receive_id) {
             $query->where([
@@ -85,5 +108,48 @@ class HomeController extends AbstractController
         }
 
         return response()->json(["code" => 200, "data" => $chatList ?? []]);
+    }
+
+    /**
+     * Notes: 添加对话列表
+     * Date: 2021/6/8 14:24
+     * @param RequestInterface $request
+     */
+    public function addTalk(RequestInterface $request)
+    {
+        $uid = $this->uid();
+        $receive_id = $request->input("receive_id");
+
+        UserChatList::query()->updateOrCreate([
+            "uid"       => $uid,
+            "friend_id" => $receive_id,
+        ],[
+            "updated_at" => Carbon::now()->toDateTimeString()
+        ]);
+
+        return $this->outResponse(0, "ok");
+    }
+
+    /**
+     * Notes: 对话列表
+     * Date: 2021/6/8 14:31
+     * @param RequestInterface $request
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function userChatList(RequestInterface $request)
+    {
+        $userChatList = UserChatList::query()->where("uid", $this->uid())->with(["friendUserInfo"])->get()->map(function (&$userChatList) {
+
+            $data = $this->userChatListHandleService->get($userChatList->uid, $userChatList->friend_id);
+
+            $userChatList->content = $data ? json_decode($data, true)["content"] : "";
+            $userChatList->updated_at = $data ? json_decode($data, true)["updated_at"] : $userChatList->updated_at;
+
+            return $userChatList;
+        })->toArray();
+
+        array_multisort(array_column($userChatList, "updated_at"), SORT_DESC, $userChatList);
+
+        return $this->outResponse(0, compact("userChatList"));
     }
 }

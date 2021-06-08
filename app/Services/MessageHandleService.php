@@ -11,6 +11,7 @@ namespace App\Services;
 use App\Model\ChatList;
 use App\Model\Oauth;
 use App\Model\UserFriend;
+use Carbon\Carbon;
 use Swoole\WebSocket\Frame;
 
 class MessageHandleService
@@ -19,11 +20,12 @@ class MessageHandleService
 
     const ON_FRIEND_APPLY_EVENT = "friend_apply_event";
 
-    protected $socketClientService;
+    protected $socketClientService, $userChatListHandleService;
 
-    public function __construct(SocketClientService $socketClientService)
+    public function __construct(SocketClientService $socketClientService, UserChatListHandleService $userChatListHandleService)
     {
         $this->socketClientService = $socketClientService;
+        $this->userChatListHandleService = $userChatListHandleService;
     }
 
     /**
@@ -75,6 +77,9 @@ class MessageHandleService
 
         // 添加聊天记录
         ChatList::saveChatRecord($currentUserId, $userId, $data);
+
+        // 设置最后一条消息缓存
+        $this->userChatListHandleService->set($userId, $currentUserId, ["content" => mb_substr($data, 0, 6), "updated_at" => Carbon::now()->toDateTimeString()]);
 
         $message = json_encode(["event" => self::ON_TALK_EVENT, "data" => $data, "username" => $userInfo->name], JSON_UNESCAPED_UNICODE);
 

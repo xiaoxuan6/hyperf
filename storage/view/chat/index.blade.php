@@ -66,21 +66,70 @@
         <div class="friend-list friend"
              style="text-align: center; height: 30px; border-bottom: #636b6f 1px solid; line-height: 30px">好友列表
         </div>
-        <div style="display: none" class="friends-list">
-            <ul style="text-align: center">
-                @foreach($userFriend as $value)
-                    <li value="{{$value['id']}}" class="user" style="border-bottom: #636b6f 1px dashed; list-style: none; width: 100%">{{$value['name']}}</li><br>
-                @endforeach
-            </ul>
+        <div class="chat-list friend"
+             style="text-align: center; height: 30px; border-bottom: #636b6f 1px solid; line-height: 30px">消息记录
         </div>
         <div class="logout"
              style="border-top: #636b6f 1px solid; text-align: center; height: 60px; position: absolute; bottom: 0; width: 100%; line-height: 60px">
             退出
         </div>
     </div>
-    <div style="width: 500px; height: 95%; border: black 1px solid; text-align: center; display:table;"
-         class="content-parent">
-        <div style="display:table-cell;vertical-align:middle;">请选择聊天对象</div>
+    {{--<div style="width: 500px; height: 95%; border: black 1px solid; text-align: center; display:table;" class="content-parent">--}}
+    {{--<div style="display:table-cell;vertical-align:middle;">请选择聊天对象</div>--}}
+    {{--</div>--}}
+    <div style="width: 500px; height: 95%; border: black 1px solid; display:none;text-align: center;" class="user-list">
+        <div style="height: 52px; margin-top: 40px; border-bottom: black 1px solid;">
+            <span style="height: 30px; width: 15%">好友列表</span>
+        </div>
+        <div>
+            <ul>
+                @foreach($userFriend as $value)
+                    <li style="border: #636b6f 1px solid; list-style: none; height: 30px; width:100%;  line-height: 30px; border-radius: 5px; padding: 10px; margin-left: -30px; margin-top: 5px">
+                        <div style="float: left" class="user-left">
+                            <span style="font-weight: 900">{{$value["name"]}}</span>
+                        </div>
+                        <div style="float: right; width: 30%;" value="{{$value["id"]}}" class="user-right">
+                            <div class="send-message" style="float: left">发送消息</div>
+                            <div style="float:left;margin-left: 10px">删除好友</div>
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+    <div style="width: 500px; height: 95%; border: black 1px solid; display:table;text-align: center;" class="chat-log">
+        <div style="height: 52px; margin-top: 40px; border-bottom: black 1px solid;">
+            <span style="height: 30px; width: 15%">消息记录</span>
+        </div>
+        <div>
+            <ul class="notice-log">
+                @foreach($userChatList as $value)
+                    <li style="border: #636b6f 1px solid; list-style: none; height: 30px; width:100%;  line-height: 30px; border-radius: 5px; padding: 10px; margin-left: -30px; margin-top: 5px"
+                        class="chat-log-user" value="{{$value["friend_id"]}}">
+                        <div style="float: left">
+                            <span style="font-weight: 900">{{$value["friend_user_info"]["name"]}}：</span>
+                            {{$value["content"]}}
+                        </div>
+                        <div style="float: right">{{$value["updated_at"]}}</div>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+    <div style="width: 500px; height: 95%; border: black 1px solid; display:none;" class="notice">
+        <div style="height: 52px; margin-top: 40px; border-bottom: black 1px solid;text-align: center; ">
+            <span style="height: 30px; width: 15%" class="apply-search">消息通知</span>
+        </div>
+        <div style="margin: 0;">
+            <div style="height: 50px; line-height: 50px; padding-left: 15px">
+                <div style="text-align: center; width: 450px;" id="apply-notice-list">
+                    {{--@foreach($applyUser as $value)--}}
+                    {{--<div style="float: left"><storage>{{$value["oauth"]["name"]}}</storage></div><div style="float: right"><button value="{{$value["id"]}}" @if($value["status"] == 0) class="apply-user-agree"@endif>@if($value["status"] == 1)已同意@else同意@endif</button></div>--}}
+                    {{--<br>--}}
+                    {{--@endforeach--}}
+                </div>
+            </div>
+        </div>
     </div>
     <div style="width: 500px; height: 95%; border: black 1px solid; display:none;" class="friend-search">
         <div style="height: 63px; margin-top: 60px; border-bottom: black 1px solid;text-align: center; ">
@@ -95,25 +144,11 @@
             </div>
         </div>
     </div>
-    <div style="width: 500px; height: 95%; border: black 1px solid; display:none;" class="notice">
-        <div style="height: 52px; margin-top: 40px; border-bottom: black 1px solid;text-align: center; ">
-            <span style="height: 30px; width: 15%" class="apply-search">消息通知</span>
-        </div>
-        <div style="margin: 0;">
-            <div style="height: 50px; line-height: 50px; padding-left: 15px">
-                <div style="text-align: center; width: 450px;" id="apply-notice-list">
-                    @foreach($applyUser as $value)
-                        <div style="float: left"><storage>{{$value["oauth"]["name"]}}</storage></div><div style="float: right"><button value="{{$value["id"]}}" @if($value["status"] == 0) class="apply-user-agree"@endif>@if($value["status"] == 1)已同意@else同意@endif</button></div>
-                        <br>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
     <div style="width: 500px; height: 95%; border: black 1px solid; display: none" class="content">
         <div style="width: 100%; height: 357px; border-bottom: #636b6f 2px solid">
-            <div style="border-bottom: black 1px solid; height: 30px; line-height: 30px">
-                聊天记录：
+            <div style="border-bottom: black 1px solid; height: 30px; line-height: 30px; text-align: center"
+                 class="username">
+                {{--聊天记录：--}}
             </div>
             <div>
                 <div id="recv"></div>
@@ -177,7 +212,7 @@
         var username = $("#username").attr("value");
         var str = document.getElementById("recv").innerHTML;
         $("#recv").html("");
-        $("#recv").append(str + "<br>昵称：" + username + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + rece) + "<br> "
+        $("#recv").append(str + "昵称：" + username + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + rece) + "<br> "
         $("#recv").after("")
     }
 
@@ -203,10 +238,11 @@
         $(this).css("background", "#636b6f")
         $(this).css("color", "white")
 
-        $(".content-parent").css("display", "none")
         $(".content").css("display", "none")
         $(".friend-search").css("display", "none")
         $(".notice").css("display", "table")
+        $(".chat-log").css("display", "none")
+        $(".user-list").css("display", "none");
     });
 
     $(".friend-apply").click(function () {
@@ -216,10 +252,11 @@
         $(this).css("background", "#636b6f")
         $(this).css("color", "white")
 
-        $(".content-parent").css("display", "none")
         $(".content").css("display", "none")
         $(".friend-search").css("display", "table")
         $(".notice").css("display", "none")
+        $(".chat-log").css("display", "none")
+        $(".user-list").css("display", "none");
     });
 
     $(".friend-list").click(function () {
@@ -229,13 +266,68 @@
         $(this).css("background", "#636b6f")
         $(this).css("color", "white")
 
-        $(".content-parent").css("display", "table")
         $(".content").css("display", "none")
         $('.apply-list').css("display", "none")
         $(".friend-search").css("display", "none")
         $(".notice").css("display", "none")
-        $(".friends-list").css("display", "table");
+        $(".user-list").css("display", "table");
+        $(".chat-log").css("display", "none")
     });
+
+    $(".chat-list").click(function () {
+        $(this).parent().find(".friend").css("background", "white")
+        $(this).parent().find(".friend").css("color", "black")
+
+        $(this).css("background", "#636b6f")
+        $(this).css("color", "white")
+
+        $(".content").css("display", "none")
+        $('.apply-list').css("display", "none")
+        $(".friend-search").css("display", "none")
+        $(".notice").css("display", "none")
+        $(".chat-log").css("display", "table")
+        $(".user-list").css("display", "none");
+
+        $.ajax({
+            url: "/api/home/userChatList",
+            type: "post",
+            data: {
+                token: token,
+            },
+            success: function (e) {
+                if (e.code == 0) {
+                    var data = e.data.userChatList
+                    len = data.length
+
+                    var str = ""
+                    for ($i = 0; $i < len; $i++) {
+                        str += "<li style=\"border: #636b6f 1px solid; list-style: none; height: 30px; width:100%;  line-height: 30px; border-radius: 5px; padding: 10px; margin-left: -30px; margin-top: 5px\" class=\"chat-log-user\" value=" + data[$i]["friend_id"] + ">\n" +
+                            "                        <div style=\"float: left\">\n" +
+                            "                            <span style=\"font-weight: 900\">" + data[$i]["friend_user_info"]["name"] + "：</span>\n" + data[$i]["content"] +
+                            "                        </div>\n" +
+                            "                        <div style=\"float: right\">" + data[$i]["updated_at"] + "</div>\n" +
+                            "                    </li>";
+                    }
+
+                    $(".notice-log").html(str)
+                }
+            }
+        })
+    });
+
+    $(document).on("click", ".chat-log-user", function () {
+        var name = $(this).find("span").text()
+        var id = $(this).attr("value")
+
+        $(".chat-log").css("display", "none")
+        $(".content").css("display", "table")
+
+        $(".username").css("font-weight", 900)
+        $(".username").html(name)
+        $("#recv").html("");
+        chat(id)
+
+    })
 
     $(".apply-search").click(function () {
         var friendId = $(".apply").val();
@@ -266,7 +358,7 @@
                         str += "<button value=" + e.data.id + ">已申请</button></div>";
                     }
 
-                    if (e.data.isfriend == 2){
+                    if (e.data.isfriend == 2) {
                         str += "<button value=" + e.data.id + ">已同意</button></div>";
                     }
 
@@ -291,7 +383,7 @@
                 "token": token
             },
             success: function (e) {
-                if(e.code == 0) {
+                if (e.code == 0) {
                     $(".apply-user").html("已申请");
                     $(".apply-user").removeAttr("class");
                 }
@@ -300,7 +392,7 @@
         })
     });
 
-    $(".apply-user-agree").click(function(){
+    $(".apply-user-agree").click(function () {
         var id = $(this).attr("value");
 
         $.ajax({
@@ -311,7 +403,7 @@
                 "token": token
             },
             success: function (e) {
-                if(e.code == 0) {
+                if (e.code == 0) {
                     $(".apply-user-agree").html("已同意")
                     $(".apply-user").removeAttr("class");
                 }
@@ -320,11 +412,39 @@
         })
     });
 
+    $(document).on("click", ".send-message", function () {
+        $(".user-list").css("display", "none")
+        $(".content").css("display", "table")
+
+        var id = $(this).parent(".user-right").attr("value")
+        var username = $(this).parent(".user-right").prev(".user-left").text()
+        $("#receive_user").val(id)
+        $(".username").css("font-weight", 900)
+        $(".username").html(username)
+
+        // 聊天记录
+        $("#recv").html("");
+        chat(id)
+
+        $.ajax({
+            url: "/api/home/addTalk",
+            type: "post",
+            data: {
+                receive_id: id,
+                token: token,
+            },
+            success: function (e) {
+                if (e.code != 0) {
+                    alert("新增对话列表失败");
+                }
+            }
+        })
+    });
+
     $(".user").click(function () {
         var userId = $(this).attr("value");
         $("#receive_user").attr("value", userId);
         $(".content").css("display", "table");
-        $(".content-parent").css("display", "none");
         $('.apply-list').css("display", "none")
         $(".friend-search").css("display", "none")
         $(".notice").css("display", "none")
@@ -334,31 +454,35 @@
         $("#recv").html("");
         var content = $("#recv").text();
         if (!content) {
-            $.ajax({
-                url: "/api/home/chatRecordList",
-                type: "post",
-                data: {
-                    "receive_id": userId,
-                    "token": token,
-                },
-                success: function (result) {
-                    if (result.code == 200) {
-                        var data = result.data;
-                        len = data.length;
-
-                        var str = "";
-                        for ($i = len - 1; $i > -1; $i--) {
-                            str += "昵称：" + data[$i]["uid_name"] + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + data[$i]['content'] + "<br>";
-                        }
-
-                        $("#recv").append(str)
-                        $("#recv").after("")
-                    } else {
-                        alert(result.msg)
-                    }
-                }
-            })
+            chat(userId)
         }
     });
+
+    function chat(userId) {
+        $.ajax({
+            url: "/api/home/chatRecordList",
+            type: "post",
+            data: {
+                "receive_id": userId,
+                "token": token,
+            },
+            success: function (result) {
+                if (result.code == 200) {
+                    var data = result.data;
+                    len = data.length;
+
+                    var str = "";
+                    for ($i = len - 1; $i > -1; $i--) {
+                        str += "昵称：" + data[$i]["uid_name"] + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + data[$i]['content'] + "<br>";
+                    }
+
+                    $("#recv").append(str)
+                    $("#recv").after("")
+                } else {
+                    alert(result.msg)
+                }
+            }
+        })
+    }
 </script>
 </html>

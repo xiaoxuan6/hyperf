@@ -23,8 +23,26 @@ abstract class AbstractController extends \App\Controller\AbstractController
      */
     protected $auth;
 
+    protected function getToken()
+    {
+        return $token = request()->input("token");
+    }
+
     public function uid($token = null)
     {
+        if (is_null($token)) {
+            $token = $this->getToken();
+        }
+
+        return $this->getUser($token)->getId();
+    }
+
+    public function getUser($token = null)
+    {
+        if (is_null($token)) {
+            $token = $this->getToken();
+        }
+        
         return $this->auth->guard()->user($token);
     }
 }
