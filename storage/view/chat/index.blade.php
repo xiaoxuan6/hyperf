@@ -59,10 +59,6 @@
              style="text-align: center; height: 30px; border-bottom: #636b6f 1px solid; line-height: 30px;">
             消息通知
         </div>
-        <div class="friend-apply friend"
-             style="text-align: center; height: 30px; border-bottom: #636b6f 1px solid; line-height: 30px;">
-            添加好友
-        </div>
         <div class="friend-list friend"
              style="text-align: center; height: 30px; border-bottom: #636b6f 1px solid; line-height: 30px">好友列表
         </div>
@@ -80,6 +76,13 @@
     <div style="width: 500px; height: 95%; border: black 1px solid; display:none;text-align: center;" class="user-list">
         <div style="height: 52px; margin-top: 40px; border-bottom: black 1px solid;">
             <span style="height: 30px; width: 15%">好友列表</span>
+            <div style="width: 100%; height: 30px;line-height: 30px">
+                <div style="float: left; width: 120px;font-weight: 700">我的好友（{{count($userFriend)}}）</div>
+                <div class="friend-apply"
+                     style="float: right; width: 100px; border-radius: 5px; border: #636b6f 1px solid;margin-right: 10px">
+                    添加好友
+                </div>
+            </div>
         </div>
         <div>
             <ul>
@@ -145,15 +148,8 @@
         </div>
     </div>
     <div style="width: 500px; height: 95%; border: black 1px solid; display: none" class="content">
-        <div style="width: 100%; height: 357px; border-bottom: #636b6f 2px solid">
-            <div style="border-bottom: black 1px solid; height: 30px; line-height: 30px; text-align: center"
-                 class="username">
-                {{--聊天记录：--}}
-            </div>
-            <div>
-                <div id="recv"></div>
-            </div>
-        </div>
+        <div style="border-bottom: black 1px solid; height: 30px; line-height: 30px; text-align: center" class="username"></div>
+        <div id="recv" style="overflow: auto;height: 310px;"></div>
         <div>
             <div>
                 <textarea rows="5" style="width: 98.5%" id="rece"></textarea>
@@ -185,6 +181,9 @@
             $("#recv").html("");
             $("#recv").append(str + "<br> 昵称：" + data["username"] + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + data['data'])
             $("#recv").after("")
+
+            // 聊天记录
+            chatLog()
         }
 
         if (data['event'] == "friend_apply_event") {
@@ -197,6 +196,10 @@
         var rece = document.getElementById("rece").value;
         var receive_user = $("#receive_user").attr("value");
 
+        if (!receive_user) {
+            alert("请选择聊天对象")
+            return;
+        }
         if (!rece) {
             alert("请选择输入聊天内容")
             return;
@@ -205,15 +208,22 @@
         var data = {}
         data.data = rece;
         data.receive_user = receive_user;
-
         websocket.send(JSON.stringify(data));
         document.getElementById("rece").value = "";
 
         var username = $("#username").attr("value");
         var str = document.getElementById("recv").innerHTML;
         $("#recv").html("");
-        $("#recv").append(str + "昵称：" + username + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + rece) + "<br> "
-        $("#recv").after("")
+        $("#recv").append(str + "<br>昵称：" + username + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + rece)
+        // $("#recv").after("")
+
+        // 窗口滚动到底部
+        var scrollTop = $("#recv")[0].scrollHeight;
+        var num = $("#recv").css("height")
+        var height = num.replace("px", "") - 250;
+        if(scrollTop > height) {
+            $("#recv").scrollTop(scrollTop);
+        }
     }
 
     $(".logout").click(function () {
@@ -246,16 +256,7 @@
     });
 
     $(".friend-apply").click(function () {
-        $(this).parent().find(".friend").css("background", "white")
-        $(this).parent().find(".friend").css("color", "black")
-
-        $(this).css("background", "#636b6f")
-        $(this).css("color", "white")
-
-        $(".content").css("display", "none")
         $(".friend-search").css("display", "table")
-        $(".notice").css("display", "none")
-        $(".chat-log").css("display", "none")
         $(".user-list").css("display", "none");
     });
 
@@ -288,31 +289,8 @@
         $(".chat-log").css("display", "table")
         $(".user-list").css("display", "none");
 
-        $.ajax({
-            url: "/api/home/userChatList",
-            type: "post",
-            data: {
-                token: token,
-            },
-            success: function (e) {
-                if (e.code == 0) {
-                    var data = e.data.userChatList
-                    len = data.length
-
-                    var str = ""
-                    for ($i = 0; $i < len; $i++) {
-                        str += "<li style=\"border: #636b6f 1px solid; list-style: none; height: 30px; width:100%;  line-height: 30px; border-radius: 5px; padding: 10px; margin-left: -30px; margin-top: 5px\" class=\"chat-log-user\" value=" + data[$i]["friend_id"] + ">\n" +
-                            "                        <div style=\"float: left\">\n" +
-                            "                            <span style=\"font-weight: 900\">" + data[$i]["friend_user_info"]["name"] + "：</span>\n" + data[$i]["content"] +
-                            "                        </div>\n" +
-                            "                        <div style=\"float: right\">" + data[$i]["updated_at"] + "</div>\n" +
-                            "                    </li>";
-                    }
-
-                    $(".notice-log").html(str)
-                }
-            }
-        })
+        // 聊天记录
+        chatLog()
     });
 
     $(document).on("click", ".chat-log-user", function () {
@@ -324,6 +302,7 @@
 
         $(".username").css("font-weight", 900)
         $(".username").html(name)
+        $("#receive_user").attr("value", id);
         $("#recv").html("");
         chat(id)
 
@@ -459,6 +438,10 @@
     });
 
     function chat(userId) {
+        if(!userId) {
+            alert("请选择聊天对象");
+            return ;
+        }
         $.ajax({
             url: "/api/home/chatRecordList",
             type: "post",
@@ -480,6 +463,34 @@
                     $("#recv").after("")
                 } else {
                     alert(result.msg)
+                }
+            }
+        })
+    };
+
+    function chatLog() {
+        $.ajax({
+            url: "/api/home/userChatList",
+            type: "post",
+            data: {
+                token: token,
+            },
+            success: function (e) {
+                if (e.code == 0) {
+                    var data = e.data.userChatList
+                    len = data.length
+
+                    var str = ""
+                    for ($i = 0; $i < len; $i++) {
+                        str += "<li style=\"border: #636b6f 1px solid; list-style: none; height: 30px; width:100%;  line-height: 30px; border-radius: 5px; padding: 10px; margin-left: -30px; margin-top: 5px\" class=\"chat-log-user\" value=" + data[$i]["friend_id"] + ">\n" +
+                            "                        <div style=\"float: left\">\n" +
+                            "                            <span style=\"font-weight: 900\">" + data[$i]["friend_user_info"]["name"] + "：</span>\n" + data[$i]["content"] +
+                            "                        </div>\n" +
+                            "                        <div style=\"float: right\">" + data[$i]["updated_at"] + "</div>\n" +
+                            "                    </li>";
+                    }
+
+                    $(".notice-log").html(str)
                 }
             }
         })
