@@ -130,3 +130,10 @@ function server()
 {
     return app()->get(\Hyperf\Server\ServerFactory::class)->getServer()->getServer();
 }
+
+function arraySort(array $array = [], $column, $sort = SORT_DESC)
+{
+    array_multisort(array_column($array, $column), $sort, $array);
+
+    return $array;
+}

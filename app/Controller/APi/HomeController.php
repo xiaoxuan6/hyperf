@@ -148,7 +148,8 @@ class HomeController extends AbstractController
             return $userChatList;
         })->toArray();
 
-        array_multisort(array_column($userChatList, "updated_at"), SORT_DESC, $userChatList);
+//        array_multisort(array_column($userChatList, "updated_at"), SORT_DESC, $userChatList);
+        $userChatList = arraySort($userChatList, "updated_at");
 
         return $this->outResponse(0, compact("userChatList"));
     }
