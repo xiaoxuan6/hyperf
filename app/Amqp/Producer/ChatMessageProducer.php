@@ -9,9 +9,9 @@ use Hyperf\Amqp\Annotation\Producer;
 use Hyperf\Amqp\Message\ProducerMessage;
 use Hyperf\Amqp\Message\Type;
 
-/**
- * @Producer()
- */
+///**
+// * @Producer()
+// */
 class ChatMessageProducer extends ProducerMessage
 {
     protected $type = Type::DIRECT;

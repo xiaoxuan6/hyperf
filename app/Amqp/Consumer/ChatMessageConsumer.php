@@ -13,9 +13,9 @@ use Hyperf\Amqp\Annotation\Consumer;
 use Hyperf\Amqp\Message\ConsumerMessage;
 use PhpAmqpLib\Message\AMQPMessage;
 
-/**
- * @Consumer(name ="ChatMessageConsumer", nums=1)
- */
+///**
+// * @Consumer(name ="ChatMessageConsumer", nums=1)
+// */
 class ChatMessageConsumer extends ConsumerMessage
 {
     protected $type = Type::DIRECT;

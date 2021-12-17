@@ -11,10 +11,10 @@ use Hyperf\Amqp\Annotation\Consumer;
 use Hyperf\Amqp\Message\ConsumerMessage;
 use PhpAmqpLib\Message\AMQPMessage;
 
-/**
- * 添加该方法会自动执行消费队列（前提是 enable = true）
- * @Consumer()
- */
+///**
+// * 添加该方法会自动执行消费队列（前提是 enable = true）
+// * @Consumer()
+// */
 // exchange="hyperf", routingKey="hyperf", queue="hyperf", name ="DemoConsumer", nums=1
 class DemoConsumer extends ConsumerMessage
 {
