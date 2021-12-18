@@ -11,7 +11,7 @@ declare(strict_types=1);
  */
 return [
     'default' => [
-        'enable' => false, // 代表该连接下的所有消费者进程是否自启功能。（全局关闭）
+        'enable' => true, // 代表该连接下的所有消费者进程是否自启功能。（全局关闭）
         'host' => '127.0.0.1',
         'port' => 4150,
         'pool' => [
